@@ -1,0 +1,95 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.texttechnologylab.annotation</groupId>
+  <artifactId>IsoSpace</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <build>
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.8.0</version>
+        <configuration>
+          <source>1.8</source>
+          <target>1.8</target>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+  
+  	<repositories>
+		<repository>
+			<id>jcenter</id>
+			<url>https://jcenter.bintray.com/</url>
+		</repository>
+		<repository>
+			<id>ukp-oss-model-releases</id>
+			<url>http://zoidberg.ukp.informatik.tu-darmstadt.de/artifactory/public-model-releases-local</url>
+		</repository>
+	</repositories>
+  
+  
+  <properties>
+  <dkpro.core.version>1.12.0</dkpro.core.version>
+  </properties>
+  
+  <dependencyManagement>
+  <dependencies>
+    <dependency>
+      <groupId>org.dkpro.core</groupId>
+      <artifactId>dkpro-core-asl</artifactId>
+      <version>${dkpro.core.version}</version>
+      <type>pom</type>
+      <scope>import</scope>
+    </dependency>
+  </dependencies>
+</dependencyManagement>
+  
+  <dependencies>
+  <!-- https://mvnrepository.com/artifact/org.apache.uima/uimaj-core -->
+<dependency>
+    <groupId>org.apache.uima</groupId>
+    <artifactId>uimaj-core</artifactId>
+    <version>2.10.4</version>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/org.apache.uima/uimafit-core -->
+<dependency>
+    <groupId>org.apache.uima</groupId>
+    <artifactId>uimafit-core</artifactId>
+    <version>2.4.0</version>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/de.tudarmstadt.ukp.dkpro.core/de.tudarmstadt.ukp.dkpro.core.api.segmentation-asl -->
+  <dependency>
+    <groupId>org.dkpro.core</groupId>
+    <artifactId>dkpro-core-opennlp-asl</artifactId>
+  </dependency>
+  
+  <!-- https://mvnrepository.com/artifact/de.tudarmstadt.ukp.dkpro.core/de.tudarmstadt.ukp.dkpro.core.tokit-asl -->
+<dependency>
+    <groupId>de.tudarmstadt.ukp.dkpro.core</groupId>
+    <artifactId>de.tudarmstadt.ukp.dkpro.core.tokit-asl</artifactId>
+    <version>1.9.0</version>
+</dependency>
+  
+  <dependency>
+  	<groupId>org.texttechnologylab.annotation</groupId>
+  	<artifactId>typesystem</artifactId>
+  	<version>1.8.8</version>
+  </dependency>
+
+ <dependency>
+	<groupId>de.tudarmstadt.ukp.dkpro.core</groupId>
+	<artifactId>de.tudarmstadt.ukp.dkpro.core.corenlp-gpl</artifactId>
+	<version>1.9.0</version>
+</dependency>
+<!-- Thanks for using https://jar-download.com -->
+
+<dependency>
+  <groupId>de.tudarmstadt.ukp.dkpro.core</groupId>
+  <artifactId>de.tudarmstadt.ukp.dkpro.core.api.io-asl</artifactId>
+  <version>1.9.1</version>
+</dependency>
+
+  </dependencies>
+</project>

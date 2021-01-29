@@ -1,0 +1,1088 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmlns:xmi="http://www.omg.org/XMI"
+         xmlns:time="http:///org/texttechnologylab/annotation/semaf/isotimeml/time.ecore"
+         xmlns:type15="http:///org/hucompute/textimager/uima/type.ecore" xmlns:cas="http:///uima/cas.ecore"
+         xmlns:tweet="http:///de/tudarmstadt/ukp/dkpro/core/api/lexmorph/type/pos/tweet.ecore"
+         xmlns:type19="http:///org/texttechnologylab/annotation/context/type.ecore"
+         xmlns:type14="http:///org/hucompute/services/type.ecore"
+         xmlns:type2="http:///de/tudarmstadt/ukp/dkpro/core/api/coref/type.ecore"
+         xmlns:stanford="http:///org/apache/uima/stanford.ecore"
+         xmlns:administration="http:///org/texttechnologylab/annotation/administration.ecore"
+         xmlns:type17="http:///org/texttechnologylab/annotation/node/type.ecore"
+         xmlns:html="http:///org/apache/uima/ruta/type/html.ecore"
+         xmlns:type20="http:///org/texttechnologylab/annotation/orientation/type.ecore"
+         xmlns:isospace="http:///org/texttechnologylab/annotation/semaf/isospace.ecore"
+         xmlns:iaa="http:///org/texttechnologylab/iaa.ecore"
+         xmlns:type9="http:///de/tudarmstadt/ukp/dkpro/core/api/transform/type.ecore"
+         xmlns:sentence="http:///org/texttechnologylab/annotation/sentence.ecore"
+         xmlns:type="http:///de/tudarmstadt/ukp/dkpro/core/api/anomaly/type.ecore"
+         xmlns:isobase="http:///org/texttechnologylab/annotation/semaf/isobase.ecore"
+         xmlns:type13="http:///org/dkpro/core/api/xml/type.ecore"
+         xmlns:segmentation2="http:///org/hucompute/textimager/uima/type/segmentation.ecore"
+         xmlns:ocr="http:///org/texttechnologylab/annotation/ocr.ecore"
+         xmlns:type11="http:///de/tudarmstadt/ukp/dkpro/core/sentiment/type.ecore"
+         xmlns:disambiguation="http:///org/hucompute/webservices/disambiguation.ecore"
+         xmlns:type18="http:///org/texttechnologylab/annotation/attribution/type.ecore"
+         xmlns:pos="http:///de/tudarmstadt/ukp/dkpro/core/api/lexmorph/type/pos.ecore"
+         xmlns:isotimeml="http:///org/texttechnologylab/annotation/semaf/isotimeml.ecore"
+         xmlns:tcas="http:///uima/tcas.ecore"
+         xmlns:semafsr="http:///org/texttechnologylab/annotation/semaf/semafsr.ecore"
+         xmlns:dependency="http:///de/tudarmstadt/ukp/dkpro/core/api/syntax/type/dependency.ecore"
+         xmlns:type6="http:///de/tudarmstadt/ukp/dkpro/core/api/semantics/type.ecore"
+         xmlns:heideltime="http:///de/unihd/dbs/uima/types/heideltime.ecore"
+         xmlns:type3="http:///de/tudarmstadt/ukp/dkpro/core/api/metadata/type.ecore"
+         xmlns:segmentation="http:///org/hucompute/services/type/segmentation.ecore"
+         xmlns:typo="http:///org/texttechnologylab/annotation/typo.ecore"
+         xmlns:type7="http:///de/tudarmstadt/ukp/dkpro/core/api/structure/type.ecore"
+         xmlns:type16="http:///org/texttechnologylab/annotation/type.ecore"
+         xmlns:meta="http:///org/texttechnologylab/annotation/semaf/meta.ecore"
+         xmlns:knowledge="http:///org/texttechnologylab/annotation/knowledge.ecore"
+         xmlns:wikidata="http:///org/hucompute/textimager/uima/type/wikidata.ecore"
+         xmlns:topic="http:///org/hucompute/webservices/topic.ecore"
+         xmlns:type12="http:///org/apache/uima/ruta/type.ecore"
+         xmlns:morph="http:///de/tudarmstadt/ukp/dkpro/core/api/lexmorph/type/morph.ecore"
+         xmlns:wikipedia="http:///org/hucompute/textimager/uima/type/wikipedia.ecore"
+         xmlns:annotation="http:///org/texttechnologylab/annotation.ecore"
+         xmlns:category="http:///org/hucompute/textimager/uima/type/category.ecore"
+         xmlns:twitter="http:///org/texttechnologylab/annotation/twitter.ecore"
+         xmlns:type8="http:///de/tudarmstadt/ukp/dkpro/core/api/syntax/type.ecore"
+         xmlns:IsoSpatial="http:///org/texttechnologylab/annotation/semaf/IsoSpatial.ecore"
+         xmlns:type4="http:///de/tudarmstadt/ukp/dkpro/core/api/ner/type.ecore"
+         xmlns:type10="http:///de/tudarmstadt/ukp/dkpro/core/io/jwpl/type.ecore"
+         xmlns:type5="http:///de/tudarmstadt/ukp/dkpro/core/api/segmentation/type.ecore"
+         xmlns:concept="http:///org/texttechnologylab/annotation/type/concept.ecore"
+         xmlns:constituent="http:///de/tudarmstadt/ukp/dkpro/core/api/syntax/type/constituent.ecore"
+         xmlns:Room="http:///org/texttechnologylab/annotation/Room.ecore"
+         xmlns:type21="http:///org/texttechnologylab/annotation/temporal/type.ecore"
+         xmlns:chunk="http:///de/tudarmstadt/ukp/dkpro/core/api/syntax/type/chunk.ecore" xmi:version="2.0">
+    <cas:NULL xmi:id="0"/>
+    <tcas:DocumentAnnotation xmi:id="1" sofa="7829" begin="0" end="231" language="en"/>
+    <type5:Token xmi:id="6" sofa="7829" begin="0" end="9" order="0"/>
+    <type5:Token xmi:id="19" sofa="7829" begin="10" end="12" order="0"/>
+    <type5:Token xmi:id="32" sofa="7829" begin="13" end="16" order="0"/>
+    <type5:Token xmi:id="45" sofa="7829" begin="17" end="19" order="0"/>
+    <type5:Token xmi:id="58" sofa="7829" begin="20" end="23" order="0"/>
+    <type5:Token xmi:id="71" sofa="7829" begin="24" end="28" order="0"/>
+    <type5:Token xmi:id="84" sofa="7829" begin="29" end="34" order="0"/>
+    <type5:Token xmi:id="97" sofa="7829" begin="35" end="37" order="0"/>
+    <type5:Token xmi:id="110" sofa="7829" begin="38" end="42" order="0"/>
+    <type5:Token xmi:id="123" sofa="7829" begin="42" end="43" order="0"/>
+    <type5:Token xmi:id="136" sofa="7829" begin="44" end="46" order="0"/>
+    <type5:Token xmi:id="149" sofa="7829" begin="47" end="50" order="0"/>
+    <type5:Token xmi:id="162" sofa="7829" begin="51" end="59" order="0"/>
+    <type5:Token xmi:id="175" sofa="7829" begin="60" end="62" order="0"/>
+    <type5:Token xmi:id="188" sofa="7829" begin="63" end="66" order="0"/>
+    <type5:Token xmi:id="201" sofa="7829" begin="67" end="72" order="0"/>
+    <type5:Token xmi:id="214" sofa="7829" begin="73" end="76" order="0"/>
+    <type5:Token xmi:id="227" sofa="7829" begin="77" end="78" order="0"/>
+    <type5:Token xmi:id="240" sofa="7829" begin="79" end="83" order="0"/>
+    <type5:Token xmi:id="253" sofa="7829" begin="83" end="84" order="0"/>
+    <type5:Token xmi:id="266" sofa="7829" begin="85" end="88" order="0"/>
+    <type5:Token xmi:id="279" sofa="7829" begin="89" end="94" order="0"/>
+    <type5:Token xmi:id="292" sofa="7829" begin="95" end="97" order="0"/>
+    <type5:Token xmi:id="305" sofa="7829" begin="98" end="103" order="0"/>
+    <type5:Token xmi:id="318" sofa="7829" begin="104" end="106" order="0"/>
+    <type5:Token xmi:id="331" sofa="7829" begin="107" end="111" order="0"/>
+    <type5:Token xmi:id="344" sofa="7829" begin="112" end="117" order="0"/>
+    <type5:Token xmi:id="357" sofa="7829" begin="118" end="120" order="0"/>
+    <type5:Token xmi:id="370" sofa="7829" begin="121" end="125" order="0"/>
+    <type5:Token xmi:id="383" sofa="7829" begin="125" end="126" order="0"/>
+    <type5:Token xmi:id="396" sofa="7829" begin="127" end="129" order="0"/>
+    <type5:Token xmi:id="409" sofa="7829" begin="130" end="133" order="0"/>
+    <type5:Token xmi:id="422" sofa="7829" begin="134" end="140" order="0"/>
+    <type5:Token xmi:id="435" sofa="7829" begin="141" end="148" order="0"/>
+    <type5:Token xmi:id="448" sofa="7829" begin="148" end="149" order="0"/>
+    <type5:Token xmi:id="461" sofa="7829" begin="150" end="158" order="0"/>
+    <type5:Token xmi:id="474" sofa="7829" begin="159" end="160" order="0"/>
+    <type5:Token xmi:id="487" sofa="7829" begin="161" end="166" order="0"/>
+    <type5:Token xmi:id="500" sofa="7829" begin="167" end="171" order="0"/>
+    <type5:Token xmi:id="513" sofa="7829" begin="172" end="181" order="0"/>
+    <type5:Token xmi:id="526" sofa="7829" begin="182" end="186" order="0"/>
+    <type5:Token xmi:id="539" sofa="7829" begin="187" end="190" order="0"/>
+    <type5:Token xmi:id="552" sofa="7829" begin="191" end="195" order="0"/>
+    <type5:Token xmi:id="565" sofa="7829" begin="196" end="199" order="0"/>
+    <type5:Token xmi:id="578" sofa="7829" begin="200" end="205" order="0"/>
+    <type5:Token xmi:id="591" sofa="7829" begin="206" end="208" order="0"/>
+    <type5:Token xmi:id="604" sofa="7829" begin="209" end="213" order="0"/>
+    <type5:Token xmi:id="617" sofa="7829" begin="214" end="216" order="0"/>
+    <type5:Token xmi:id="630" sofa="7829" begin="217" end="220" order="0"/>
+    <type5:Token xmi:id="643" sofa="7829" begin="221" end="226" order="0"/>
+    <type5:Token xmi:id="656" sofa="7829" begin="227" end="230" order="0"/>
+    <type5:Token xmi:id="669" sofa="7829" begin="230" end="231" order="0"/>
+    <type5:Sentence xmi:id="682" sofa="7829" begin="0" end="43"/>
+    <type5:Sentence xmi:id="687" sofa="7829" begin="44" end="84"/>
+    <type5:Sentence xmi:id="692" sofa="7829" begin="85" end="149"/>
+    <type5:Sentence xmi:id="697" sofa="7829" begin="150" end="231"/>
+    <tcas:DocumentAnnotation xmi:id="702" sofa="7836" begin="0" end="231" language="en"/>
+    <type5:Sentence xmi:id="707" sofa="7836" begin="0" end="43"/>
+    <type5:Sentence xmi:id="712" sofa="7836" begin="44" end="84"/>
+    <type5:Sentence xmi:id="717" sofa="7836" begin="85" end="149"/>
+    <type5:Sentence xmi:id="722" sofa="7836" begin="150" end="231"/>
+    <type5:Token xmi:id="727" sofa="7836" begin="0" end="9" order="0"/>
+    <type5:Token xmi:id="740" sofa="7836" begin="10" end="12" order="0"/>
+    <type5:Token xmi:id="753" sofa="7836" begin="13" end="16" order="0"/>
+    <type5:Token xmi:id="766" sofa="7836" begin="17" end="19" order="0"/>
+    <type5:Token xmi:id="779" sofa="7836" begin="20" end="23" order="0"/>
+    <type5:Token xmi:id="792" sofa="7836" begin="24" end="28" order="0"/>
+    <type5:Token xmi:id="805" sofa="7836" begin="29" end="34" order="0"/>
+    <type5:Token xmi:id="818" sofa="7836" begin="35" end="37" order="0"/>
+    <type5:Token xmi:id="831" sofa="7836" begin="38" end="42" order="0"/>
+    <type5:Token xmi:id="844" sofa="7836" begin="42" end="43" order="0"/>
+    <type5:Token xmi:id="857" sofa="7836" begin="44" end="46" order="0"/>
+    <type5:Token xmi:id="870" sofa="7836" begin="47" end="50" order="0"/>
+    <type5:Token xmi:id="883" sofa="7836" begin="51" end="59" order="0"/>
+    <type5:Token xmi:id="896" sofa="7836" begin="60" end="62" order="0"/>
+    <type5:Token xmi:id="909" sofa="7836" begin="63" end="66" order="0"/>
+    <type5:Token xmi:id="922" sofa="7836" begin="67" end="72" order="0"/>
+    <type5:Token xmi:id="935" sofa="7836" begin="73" end="76" order="0"/>
+    <type5:Token xmi:id="948" sofa="7836" begin="77" end="78" order="0"/>
+    <type5:Token xmi:id="961" sofa="7836" begin="79" end="83" order="0"/>
+    <type5:Token xmi:id="974" sofa="7836" begin="83" end="84" order="0"/>
+    <type5:Token xmi:id="987" sofa="7836" begin="85" end="88" order="0"/>
+    <type5:Token xmi:id="1000" sofa="7836" begin="89" end="94" order="0"/>
+    <type5:Token xmi:id="1013" sofa="7836" begin="95" end="97" order="0"/>
+    <type5:Token xmi:id="1026" sofa="7836" begin="98" end="103" order="0"/>
+    <type5:Token xmi:id="1039" sofa="7836" begin="104" end="106" order="0"/>
+    <type5:Token xmi:id="1052" sofa="7836" begin="107" end="111" order="0"/>
+    <type5:Token xmi:id="1065" sofa="7836" begin="112" end="117" order="0"/>
+    <type5:Token xmi:id="1078" sofa="7836" begin="118" end="120" order="0"/>
+    <type5:Token xmi:id="1091" sofa="7836" begin="121" end="125" order="0"/>
+    <type5:Token xmi:id="1104" sofa="7836" begin="125" end="126" order="0"/>
+    <type5:Token xmi:id="1117" sofa="7836" begin="127" end="129" order="0"/>
+    <type5:Token xmi:id="1130" sofa="7836" begin="130" end="133" order="0"/>
+    <type5:Token xmi:id="1143" sofa="7836" begin="134" end="140" order="0"/>
+    <type5:Token xmi:id="1156" sofa="7836" begin="141" end="148" order="0"/>
+    <type5:Token xmi:id="1169" sofa="7836" begin="148" end="149" order="0"/>
+    <type5:Token xmi:id="1182" sofa="7836" begin="150" end="158" order="0"/>
+    <type5:Token xmi:id="1195" sofa="7836" begin="159" end="160" order="0"/>
+    <type5:Token xmi:id="1208" sofa="7836" begin="161" end="166" order="0"/>
+    <type5:Token xmi:id="1221" sofa="7836" begin="167" end="171" order="0"/>
+    <type5:Token xmi:id="1234" sofa="7836" begin="172" end="181" order="0"/>
+    <type5:Token xmi:id="1247" sofa="7836" begin="182" end="186" order="0"/>
+    <type5:Token xmi:id="1260" sofa="7836" begin="187" end="190" order="0"/>
+    <type5:Token xmi:id="1273" sofa="7836" begin="191" end="195" order="0"/>
+    <type5:Token xmi:id="1286" sofa="7836" begin="196" end="199" order="0"/>
+    <type5:Token xmi:id="1299" sofa="7836" begin="200" end="205" order="0"/>
+    <type5:Token xmi:id="1312" sofa="7836" begin="206" end="208" order="0"/>
+    <type5:Token xmi:id="1325" sofa="7836" begin="209" end="213" order="0"/>
+    <type5:Token xmi:id="1338" sofa="7836" begin="214" end="216" order="0"/>
+    <type5:Token xmi:id="1351" sofa="7836" begin="217" end="220" order="0"/>
+    <type5:Token xmi:id="1364" sofa="7836" begin="221" end="226" order="0"/>
+    <type5:Token xmi:id="1377" sofa="7836" begin="227" end="230" order="0"/>
+    <type5:Token xmi:id="1390" sofa="7836" begin="230" end="231" order="0"/>
+    <type16:QuickTreeNode xmi:id="1403" sofa="7836" create="0" modified="0" begin="0" end="9"/>
+    <type16:QuickTreeNode xmi:id="1415" sofa="7836" create="0" modified="0" begin="10" end="12"/>
+    <type16:QuickTreeNode xmi:id="1427" sofa="7836" create="0" modified="0" begin="13" end="16"/>
+    <type16:QuickTreeNode xmi:id="1439" sofa="7836" create="0" modified="0" begin="17" end="19"/>
+    <type16:QuickTreeNode xmi:id="1451" sofa="7836" create="0" modified="0" begin="20" end="23"/>
+    <type16:QuickTreeNode xmi:id="1463" sofa="7836" create="0" modified="0" begin="24" end="28"/>
+    <type16:QuickTreeNode xmi:id="1475" sofa="7836" create="0" modified="0" begin="29" end="34"/>
+    <type16:QuickTreeNode xmi:id="1487" sofa="7836" create="0" modified="0" begin="35" end="37"/>
+    <type16:QuickTreeNode xmi:id="1499" sofa="7836" create="0" modified="0" begin="38" end="42"/>
+    <type16:QuickTreeNode xmi:id="1511" sofa="7836" create="0" modified="0" begin="42" end="43"/>
+    <type16:QuickTreeNode xmi:id="1523" sofa="7836" create="0" modified="0" begin="44" end="46"/>
+    <type16:QuickTreeNode xmi:id="1535" sofa="7836" create="0" modified="0" begin="47" end="50"/>
+    <type16:QuickTreeNode xmi:id="1547" sofa="7836" create="0" modified="0" begin="51" end="59"/>
+    <type16:QuickTreeNode xmi:id="1559" sofa="7836" create="0" modified="0" begin="60" end="62"/>
+    <type16:QuickTreeNode xmi:id="1571" sofa="7836" create="0" modified="0" begin="63" end="66"/>
+    <type16:QuickTreeNode xmi:id="1583" sofa="7836" create="0" modified="0" begin="67" end="72"/>
+    <type16:QuickTreeNode xmi:id="1595" sofa="7836" create="0" modified="0" begin="73" end="76"/>
+    <type16:QuickTreeNode xmi:id="1607" sofa="7836" create="0" modified="0" begin="77" end="78"/>
+    <type16:QuickTreeNode xmi:id="1619" sofa="7836" create="0" modified="0" begin="79" end="83"/>
+    <type16:QuickTreeNode xmi:id="1631" sofa="7836" create="0" modified="0" begin="83" end="84"/>
+    <type16:QuickTreeNode xmi:id="1643" sofa="7836" create="0" modified="0" begin="85" end="88"/>
+    <type16:QuickTreeNode xmi:id="1655" sofa="7836" create="0" modified="0" begin="89" end="94"/>
+    <type16:QuickTreeNode xmi:id="1667" sofa="7836" create="0" modified="0" begin="95" end="97"/>
+    <type16:QuickTreeNode xmi:id="1679" sofa="7836" create="0" modified="0" begin="98" end="103"/>
+    <type16:QuickTreeNode xmi:id="1691" sofa="7836" create="0" modified="0" begin="104" end="106"/>
+    <type16:QuickTreeNode xmi:id="1703" sofa="7836" create="0" modified="0" begin="107" end="111"/>
+    <type16:QuickTreeNode xmi:id="1715" sofa="7836" create="0" modified="0" begin="112" end="117"/>
+    <type16:QuickTreeNode xmi:id="1727" sofa="7836" create="0" modified="0" begin="118" end="120"/>
+    <type16:QuickTreeNode xmi:id="1739" sofa="7836" create="0" modified="0" begin="121" end="125"/>
+    <type16:QuickTreeNode xmi:id="1751" sofa="7836" create="0" modified="0" begin="125" end="126"/>
+    <type16:QuickTreeNode xmi:id="1763" sofa="7836" create="0" modified="0" begin="127" end="129"/>
+    <type16:QuickTreeNode xmi:id="1775" sofa="7836" create="0" modified="0" begin="130" end="133"/>
+    <type16:QuickTreeNode xmi:id="1787" sofa="7836" create="0" modified="0" begin="134" end="140"/>
+    <type16:QuickTreeNode xmi:id="1799" sofa="7836" create="0" modified="0" begin="141" end="148"/>
+    <type16:QuickTreeNode xmi:id="1811" sofa="7836" create="0" modified="0" begin="148" end="149"/>
+    <type16:QuickTreeNode xmi:id="1823" sofa="7836" create="0" modified="0" begin="150" end="158"/>
+    <type16:QuickTreeNode xmi:id="1835" sofa="7836" create="0" modified="0" begin="159" end="160"/>
+    <type16:QuickTreeNode xmi:id="1847" sofa="7836" create="0" modified="0" begin="161" end="166"/>
+    <type16:QuickTreeNode xmi:id="1859" sofa="7836" create="0" modified="0" parent="2027" begin="167" end="171"/>
+    <type16:QuickTreeNode xmi:id="1871" sofa="7836" create="0" modified="0" parent="2027" begin="172" end="181"/>
+    <type16:QuickTreeNode xmi:id="1883" sofa="7836" create="0" modified="0" begin="182" end="186"/>
+    <type16:QuickTreeNode xmi:id="1895" sofa="7836" create="0" modified="0" begin="187" end="190"/>
+    <type16:QuickTreeNode xmi:id="1907" sofa="7836" create="0" modified="0" begin="191" end="195"/>
+    <type16:QuickTreeNode xmi:id="1919" sofa="7836" create="0" modified="0" begin="196" end="199"/>
+    <type16:QuickTreeNode xmi:id="1931" sofa="7836" create="0" modified="0" begin="200" end="205"/>
+    <type16:QuickTreeNode xmi:id="1943" sofa="7836" create="0" modified="0" begin="206" end="208"/>
+    <type16:QuickTreeNode xmi:id="1955" sofa="7836" create="0" modified="0" begin="209" end="213"/>
+    <type16:QuickTreeNode xmi:id="1967" sofa="7836" create="0" modified="0" begin="214" end="216"/>
+    <type16:QuickTreeNode xmi:id="1979" sofa="7836" create="0" modified="0" begin="217" end="220"/>
+    <type16:QuickTreeNode xmi:id="1991" sofa="7836" create="0" modified="0" parent="2043" begin="221" end="226"/>
+    <type16:QuickTreeNode xmi:id="2003" sofa="7836" create="0" modified="0" parent="2043" begin="227" end="230"/>
+    <type16:QuickTreeNode xmi:id="2015" sofa="7836" create="0" modified="0" begin="230" end="231"/>
+    <type16:QuickTreeNode xmi:id="2027" sofa="7836" create="0" modified="0" children="1859 1871" begin="167" end="181"/>
+    <type16:QuickTreeNode xmi:id="2043" sofa="7836" create="0" modified="0" children="1991 2003" begin="221" end="230"/>
+    <isospace:SpatialEntity xmi:id="2059" sofa="7836" begin="0" end="0" comment="Me &amp; my cat"
+                            object_id="abstractpoint" position="3559" rotation="3369" scale="3514" dcl="false"
+                            countable="false" cardinality="0.0"/>
+    <isospace:SpatialEntity xmi:id="2084" sofa="7836" begin="0" end="0" comment="Book"
+                            object_id="fb4f8c6863ded8305c6a44a505804654" position="3639" rotation="3285" scale="3444"
+                            dcl="false" countable="false" cardinality="0.0"/>
+    <isospace:SpatialEntity xmi:id="2109" sofa="7836" begin="0" end="0" object_id="Head" position="3544" rotation="3363"
+                            scale="3499" object_feature_array="3709 3713 3717 3721 3725" dcl="false" countable="false"
+                            cardinality="0.0"/>
+    <isospace:SpatialEntity xmi:id="2141" sofa="7836" begin="0" end="0" object_id="Face" position="3509" rotation="3411"
+                            scale="3614" object_feature_array="3729 3733 3737 3741" dcl="false" countable="false"
+                            cardinality="0.0"/>
+    <isospace:SpatialEntity xmi:id="2172" sofa="7836" begin="0" end="0" object_id="Arms" position="3659" rotation="3291"
+                            scale="3569" object_feature_array="3745 3749 3753 3757 3761" dcl="false" countable="false"
+                            cardinality="0.0"/>
+    <isospace:SpatialEntity xmi:id="2204" sofa="7836" begin="0" end="0" object_id="Legs" position="3619" rotation="3333"
+                            scale="3479" object_feature_array="3765 3769 3773" dcl="false" countable="false"
+                            cardinality="0.0"/>
+    <isospace:SpatialEntity xmi:id="2234" sofa="7836" begin="0" end="0" object_id="Mouth" position="3609"
+                            rotation="3387" scale="3574" object_feature_array="3777 3781 3785 3789 3793 3797 3801 3805"
+                            dcl="false" countable="false" cardinality="0.0"/>
+    <isospace:SpatialEntity xmi:id="2269" sofa="7836" begin="0" end="0" object_id="Nose" position="3584" rotation="3303"
+                            scale="3629" object_feature_array="3809 3813 3817 3821 3825 3829 3833" dcl="false"
+                            countable="false" cardinality="0.0"/>
+    <isospace:SpatialEntity xmi:id="2303" sofa="7836" begin="0" end="0" object_id="Ears" position="3429" rotation="3417"
+                            scale="3464" object_feature_array="3837 3841 3845" dcl="false" countable="false"
+                            cardinality="0.0"/>
+    <isospace:SpatialEntity xmi:id="2333" sofa="7836" begin="0" end="0" object_id="Eyes" position="3529" rotation="3423"
+                            scale="3484" object_feature_array="3849 3853 3857" dcl="false" countable="false"
+                            cardinality="0.0"/>
+    <isospace:SpatialEntity xmi:id="2363" sofa="7836" begin="0" end="0" object_id="Wardrobe" position="3459"
+                            rotation="3393" scale="3534"
+                            object_feature_array="3861 3865 3869 3873 3877 3881 3885 3889 3893" dcl="false"
+                            countable="false" cardinality="0.0"/>
+    <isospace:SpatialEntity xmi:id="2399" sofa="7836" begin="0" end="0" object_id="Torso" position="3564"
+                            rotation="3327" scale="3494" object_feature_array="3897 3901 3905 3909" dcl="false"
+                            countable="false" cardinality="0.0"/>
+    <isospace:SpatialEntity xmi:id="2430" sofa="7836" begin="0" end="0" comment="outside room" object_id="abstractarea"
+                            position="3594" rotation="3339" scale="3449" dcl="false" countable="false"
+                            cardinality="0.0"/>
+    <isospace:SpatialEntity xmi:id="2455" sofa="7836" begin="0" end="0" object_id="abstractarea" position="3589"
+                            rotation="3321" scale="3454" dcl="false" countable="false" cardinality="0.0"/>
+    <isospace:SpatialEntity xmi:id="2480" sofa="7836" begin="10" end="12" object_id="Root" position="3604"
+                            rotation="3381" scale="3519"
+                            object_feature_array="3669 3673 3677 3681 3685 3689 3693 3697 3701 3705" dcl="false"
+                            countable="false" cardinality="0.0"/>
+    <isospace:SpatialEntity xmi:id="2517" sofa="7836" begin="20" end="23" object_id="f0b4f696e91f59af18b14db3b83de9ff"
+                            position="3469" rotation="3375" scale="3549" dcl="false" countable="false"
+                            cardinality="0.0"/>
+    <isospace:SpatialEntity xmi:id="2542" sofa="7836" begin="44" end="46" dcl="false" countable="false"
+                            cardinality="0.0"/>
+    <isospace:SpatialEntity xmi:id="2567" sofa="7836" begin="67" end="72" object_id="377fceb1500e6452d9651cd1d591d64d"
+                            position="3524" rotation="3309" scale="3474" dcl="false" countable="false"
+                            cardinality="0.0"/>
+    <isospace:SpatialEntity xmi:id="2592" sofa="7836" begin="77" end="78" dcl="false" countable="false"
+                            cardinality="0.0"/>
+    <isospace:SpatialEntity xmi:id="2617" sofa="7836" begin="98" end="103" dcl="false" countable="false"
+                            cardinality="0.0"/>
+    <isospace:SpatialEntity xmi:id="2642" sofa="7836" begin="161" end="166" object_id="35dc51b265375d8ec57264eb88d91b63"
+                            position="3599" rotation="3351" scale="3654" dcl="false" countable="false"
+                            cardinality="0.0"/>
+    <isospace:SpatialEntity xmi:id="2667" sofa="7836" begin="191" end="195" object_id="abstractarea" position="3644"
+                            rotation="3405" scale="3664" dcl="false" countable="false" cardinality="0.0"/>
+    <isospace:SpatialEntity xmi:id="2692" sofa="7836" begin="221" end="230" object_id="abstractpoint" position="3579"
+                            rotation="3315" scale="3539" dcl="false" countable="false" cardinality="0.0"/>
+    <type16:Fingerprint xmi:id="2717" sofa="7836" create="1611052934700" modified="0"
+                        user="https://authority.hucompute.org/user/306211" reference="4026"/>
+    <type16:Fingerprint xmi:id="2726" sofa="7836" create="1611051379690" modified="0"
+                        user="https://authority.hucompute.org/user/306211" reference="2084"/>
+    <type16:Fingerprint xmi:id="2735" sofa="7836" create="1611051958961" modified="0"
+                        user="https://authority.hucompute.org/user/306211" reference="2642"/>
+    <type16:Fingerprint xmi:id="2744" sofa="7836" create="1611052954926" modified="0"
+                        user="https://authority.hucompute.org/user/306211" reference="3994"/>
+    <type16:Fingerprint xmi:id="2753" sofa="7836" create="1611051267188" modified="0"
+                        user="https://authority.hucompute.org/user/306211" reference="2043"/>
+    <type16:Fingerprint xmi:id="2762" sofa="7836" create="1611051756618" modified="0"
+                        user="https://authority.hucompute.org/user/306211" reference="2172"/>
+    <type16:Fingerprint xmi:id="2771" sofa="7836" create="1611052199239" modified="0"
+                        user="https://authority.hucompute.org/user/306211" reference="2667"/>
+    <type16:Fingerprint xmi:id="2780" sofa="7836" create="1611051757385" modified="0"
+                        user="https://authority.hucompute.org/user/306211" reference="3955"/>
+    <type16:Fingerprint xmi:id="2789" sofa="7836" create="1611051757386" modified="0"
+                        user="https://authority.hucompute.org/user/306211" reference="3969"/>
+    <type16:Fingerprint xmi:id="2798" sofa="7836" create="1611051214211" modified="0"
+                        user="https://authority.hucompute.org/user/306211" reference="3237"/>
+    <type16:Fingerprint xmi:id="2807" sofa="7836" create="1611051756619" modified="0"
+                        user="https://authority.hucompute.org/user/306211" reference="2303"/>
+    <type16:Fingerprint xmi:id="2816" sofa="7836" create="1611051245029" modified="0"
+                        user="https://authority.hucompute.org/user/306211" reference="2027"/>
+    <type16:Fingerprint xmi:id="2825" sofa="7836" create="1611051883247" modified="0"
+                        user="https://authority.hucompute.org/user/306211" reference="2567"/>
+    <type16:Fingerprint xmi:id="2834" sofa="7836" create="1611052737533" modified="0"
+                        user="https://authority.hucompute.org/user/306211" reference="4019"/>
+    <type16:Fingerprint xmi:id="2843" sofa="7836" create="1611051757385" modified="0"
+                        user="https://authority.hucompute.org/user/306211" reference="3927"/>
+    <type16:Fingerprint xmi:id="2852" sofa="7836" create="1611051757385" modified="0"
+                        user="https://authority.hucompute.org/user/306211" reference="3934"/>
+    <type16:Fingerprint xmi:id="2861" sofa="7836" create="1611051757385" modified="0"
+                        user="https://authority.hucompute.org/user/306211" reference="3941"/>
+    <type16:Fingerprint xmi:id="2870" sofa="7836" create="1611052874613" modified="0"
+                        user="https://authority.hucompute.org/user/306211" reference="4033"/>
+    <type16:Fingerprint xmi:id="2879" sofa="7836" create="1611051757385" modified="0"
+                        user="https://authority.hucompute.org/user/306211" reference="3948"/>
+    <type16:Fingerprint xmi:id="2888" sofa="7836" create="1611051264099" modified="0"
+                        user="https://authority.hucompute.org/user/306211" reference="3208"/>
+    <type16:Fingerprint xmi:id="2897" sofa="7836" create="1611052616809" modified="0"
+                        user="https://authority.hucompute.org/user/306211" reference="4012"/>
+    <type16:Fingerprint xmi:id="2906" sofa="7836" create="1611051181210" modified="0"
+                        user="https://authority.hucompute.org/user/306211" reference="3164"/>
+    <type16:Fingerprint xmi:id="2915" sofa="7836" create="1611052823988" modified="0"
+                        user="https://authority.hucompute.org/user/306211" reference="2692"/>
+    <type16:Fingerprint xmi:id="2924" sofa="7836" create="1611051249300" modified="0"
+                        user="https://authority.hucompute.org/user/306211" reference="3251"/>
+    <type16:Fingerprint xmi:id="2933" sofa="7836" create="1611051825146" modified="0"
+                        user="https://authority.hucompute.org/user/306211" reference="2517"/>
+    <type16:Fingerprint xmi:id="2942" sofa="7836" create="1611051284137" modified="0"
+                        user="https://authority.hucompute.org/user/306211" reference="2059"/>
+    <type16:Fingerprint xmi:id="2951" sofa="7836" create="1611051757386" modified="0"
+                        user="https://authority.hucompute.org/user/306211" reference="3976"/>
+    <type16:Fingerprint xmi:id="2960" sofa="7836" create="1611051756618" modified="0"
+                        user="https://authority.hucompute.org/user/306211" reference="2204"/>
+    <type16:Fingerprint xmi:id="2969" sofa="7836" create="1611051756616" modified="0"
+                        user="https://authority.hucompute.org/user/306211" reference="2480"/>
+    <type16:Fingerprint xmi:id="2978" sofa="7836" create="1611051757385" modified="0"
+                        user="https://authority.hucompute.org/user/306211" reference="3920"/>
+    <type16:Fingerprint xmi:id="2987" sofa="7836" create="1611051757385" modified="0"
+                        user="https://authority.hucompute.org/user/306211" reference="3913"/>
+    <type16:Fingerprint xmi:id="2996" sofa="7836" create="1611051756617" modified="0"
+                        user="https://authority.hucompute.org/user/306211" reference="2109"/>
+    <type16:Fingerprint xmi:id="3005" sofa="7836" create="1611051756620" modified="0"
+                        user="https://authority.hucompute.org/user/306211" reference="2399"/>
+    <type16:Fingerprint xmi:id="3014" sofa="7836" create="1611051756619" modified="0"
+                        user="https://authority.hucompute.org/user/306211" reference="2234"/>
+    <type16:Fingerprint xmi:id="3023" sofa="7836" create="1611052607267" modified="0"
+                        user="https://authority.hucompute.org/user/306211" reference="3983"/>
+    <type16:Fingerprint xmi:id="3032" sofa="7836" create="1611051756620" modified="0"
+                        user="https://authority.hucompute.org/user/306211" reference="2363"/>
+    <type16:Fingerprint xmi:id="3041" sofa="7836" create="1611051146334" modified="0"
+                        user="https://authority.hucompute.org/user/306211" reference="2592"/>
+    <type16:Fingerprint xmi:id="3050" sofa="7836" create="1611052761422" modified="0"
+                        user="https://authority.hucompute.org/user/306211" reference="2430"/>
+    <type16:Fingerprint xmi:id="3059" sofa="7836" create="1611051194872" modified="0"
+                        user="https://authority.hucompute.org/user/306211" reference="2617"/>
+    <type16:Fingerprint xmi:id="3068" sofa="7836" create="1611051173362" modified="0"
+                        user="https://authority.hucompute.org/user/306211" reference="3149"/>
+    <type16:Fingerprint xmi:id="3077" sofa="7836" create="1611052977913" modified="0"
+                        user="https://authority.hucompute.org/user/306211" reference="2455"/>
+    <type16:Fingerprint xmi:id="3086" sofa="7836" create="1611051756617" modified="0"
+                        user="https://authority.hucompute.org/user/306211" reference="2141"/>
+    <type16:Fingerprint xmi:id="3095" sofa="7836" create="1611051188147" modified="0"
+                        user="https://authority.hucompute.org/user/306211" reference="3179"/>
+    <type16:Fingerprint xmi:id="3104" sofa="7836" create="1611051756619" modified="0"
+                        user="https://authority.hucompute.org/user/306211" reference="2333"/>
+    <type16:Fingerprint xmi:id="3113" sofa="7836" create="1611051136171" modified="0"
+                        user="https://authority.hucompute.org/user/306211" reference="2542"/>
+    <type16:Fingerprint xmi:id="3122" sofa="7836" create="1611051757385" modified="0"
+                        user="https://authority.hucompute.org/user/306211" reference="3962"/>
+    <type16:Fingerprint xmi:id="3131" sofa="7836" create="1611051756619" modified="0"
+                        user="https://authority.hucompute.org/user/306211" reference="2269"/>
+    <type16:Fingerprint xmi:id="3140" sofa="7836" create="1611052281854" modified="0"
+                        user="https://authority.hucompute.org/user/306211" reference="4005"/>
+    <isospace:SRelation xmi:id="3149" sofa="7836" begin="35" end="37" relation_type="directional" cluster="null"
+                        value="directional"/>
+    <isospace:SRelation xmi:id="3164" sofa="7836" begin="60" end="62" relation_type="topoDirectional" cluster="null"
+                        value="topoDirectional"/>
+    <isospace:NonMotionEvent xmi:id="3179" sofa="7836" begin="79" end="83" countable="false"/>
+    <isospace:NonMotionEvent xmi:id="3208" sofa="7836" begin="209" end="213" countable="false"/>
+    <isospace:Measure xmi:id="3237" sofa="7836" begin="118" end="120" value="null" unit="null"/>
+    <isospace:Motion xmi:id="3251" sofa="7836" begin="167" end="181" countable="false"/>
+    <IsoSpatial:Vec4 xmi:id="3285" sofa="7836" x="0.500912964344025" y="-0.54884397983551" z="-0.240558266639709"
+                     w="-0.62449038028717"/>
+    <IsoSpatial:Vec4 xmi:id="3291" sofa="7836" x="0.0" y="0.0" z="0.0" w="1.0"/>
+    <IsoSpatial:Vec4 xmi:id="3297" sofa="7836" x="0.010456551797688" y="0.00708907749503851" z="0.00776371965184808"
+                     w="0.999890089035034"/>
+    <IsoSpatial:Vec4 xmi:id="3303" sofa="7836" x="0.0" y="0.0" z="0.0" w="1.0"/>
+    <IsoSpatial:Vec4 xmi:id="3309" sofa="7836" x="0.0462619923055172" y="0.00779164582490921" z="-0.998892664909363"
+                     w="-0.00354701420292258"/>
+    <IsoSpatial:Vec4 xmi:id="3315" sofa="7836" x="-0.00560139445587993" y="-0.00281655811704695" z="0.00144534162245691"
+                     w="0.999979317188263"/>
+    <IsoSpatial:Vec4 xmi:id="3321" sofa="7836" x="0.0" y="0.0" z="0.0" w="1.0"/>
+    <IsoSpatial:Vec4 xmi:id="3327" sofa="7836" x="0.0" y="0.0" z="0.0" w="1.0"/>
+    <IsoSpatial:Vec4 xmi:id="3333" sofa="7836" x="0.0" y="0.0" z="0.0" w="1.0"/>
+    <IsoSpatial:Vec4 xmi:id="3339" sofa="7836" x="3.44004831276834E-4" y="1.17748975753784E-4" z="-9.25066357012838E-4"
+                     w="0.999999523162842"/>
+    <IsoSpatial:Vec4 xmi:id="3345" sofa="7836" x="0.0025866087526083" y="3.12000513076782E-4" z="0.00119933555833995"
+                     w="0.999995946884155"/>
+    <IsoSpatial:Vec4 xmi:id="3351" sofa="7836" x="-0.0115427356213331" y="0.0238754507154226" z="-0.00146186607889831"
+                     w="-0.999647319316864"/>
+    <IsoSpatial:Vec4 xmi:id="3357" sofa="7836" x="0.010456551797688" y="0.00708907749503851" z="0.00776371965184808"
+                     w="0.999890089035034"/>
+    <IsoSpatial:Vec4 xmi:id="3363" sofa="7836" x="0.0" y="0.0" z="0.0" w="1.0"/>
+    <IsoSpatial:Vec4 xmi:id="3369" sofa="7836" x="0.00733785424381495" y="-0.00648430082947016" z="0.00686248764395714"
+                     w="0.999928534030914"/>
+    <IsoSpatial:Vec4 xmi:id="3375" sofa="7836" x="-0.0423673912882805" y="0.0707165524363518" z="-0.71496444940567"
+                     w="-0.694283843040466"/>
+    <IsoSpatial:Vec4 xmi:id="3381" sofa="7836" x="-0.557245790958405" y="0.386302649974823" z="0.419721990823746"
+                     w="0.603391230106354"/>
+    <IsoSpatial:Vec4 xmi:id="3387" sofa="7836" x="0.0" y="0.0" z="0.0" w="1.0"/>
+    <IsoSpatial:Vec4 xmi:id="3393" sofa="7836" x="0.0" y="0.0" z="0.0" w="1.0"/>
+    <IsoSpatial:Vec4 xmi:id="3399" sofa="7836" x="0.0" y="0.0" z="0.0" w="1.0"/>
+    <IsoSpatial:Vec4 xmi:id="3405" sofa="7836" x="0.0" y="0.0" z="0.0" w="1.0"/>
+    <IsoSpatial:Vec4 xmi:id="3411" sofa="7836" x="0.0" y="0.0" z="0.0" w="1.0"/>
+    <IsoSpatial:Vec4 xmi:id="3417" sofa="7836" x="0.0" y="0.0" z="0.0" w="1.0"/>
+    <IsoSpatial:Vec4 xmi:id="3423" sofa="7836" x="0.0" y="0.0" z="0.0" w="1.0"/>
+    <IsoSpatial:Vec3 xmi:id="3429" sofa="7836" x="-0.905509769916534" y="0.00999999977648258" z="-0.288706958293915"/>
+    <IsoSpatial:Vec3 xmi:id="3434" sofa="7836" x="0.999999940395355" y="1.00000011920929" z="0.999999940395355"/>
+    <IsoSpatial:Vec3 xmi:id="3439" sofa="7836" x="-1.28971004486084" y="0.410530239343643" z="0.770648419857025"/>
+    <IsoSpatial:Vec3 xmi:id="3444" sofa="7836" x="0.603715181350708" y="0.603715181350708" z="0.603715181350708"/>
+    <IsoSpatial:Vec3 xmi:id="3449" sofa="7836" x="1.00000011920929" y="0.999999821186066" z="1.0"/>
+    <IsoSpatial:Vec3 xmi:id="3454" sofa="7836" x="10.0" y="10.0" z="10.0"/>
+    <IsoSpatial:Vec3 xmi:id="3459" sofa="7836" x="-0.905509769916534" y="0.00999999977648258" z="-0.288706958293915"/>
+    <IsoSpatial:Vec3 xmi:id="3464" sofa="7836" x="1.0" y="1.0" z="1.0"/>
+    <IsoSpatial:Vec3 xmi:id="3469" sofa="7836" x="-6.09343338012695" y="0.51869010925293" z="1.32427906990051"/>
+    <IsoSpatial:Vec3 xmi:id="3474" sofa="7836" x="1.20060217380524" y="1.20060074329376" z="1.2005957365036"/>
+    <IsoSpatial:Vec3 xmi:id="3479" sofa="7836" x="1.0" y="1.0" z="1.0"/>
+    <IsoSpatial:Vec3 xmi:id="3484" sofa="7836" x="1.0" y="1.0" z="1.0"/>
+    <IsoSpatial:Vec3 xmi:id="3489" sofa="7836" x="-1.28971004486084" y="0.410530239343643" z="0.770648419857025"/>
+    <IsoSpatial:Vec3 xmi:id="3494" sofa="7836" x="1.0" y="1.0" z="1.0"/>
+    <IsoSpatial:Vec3 xmi:id="3499" sofa="7836" x="1.0" y="1.0" z="1.0"/>
+    <IsoSpatial:Vec3 xmi:id="3504" sofa="7836" x="-1.09506225585938" y="0.141915112733841" z="-1.958988904953"/>
+    <IsoSpatial:Vec3 xmi:id="3509" sofa="7836" x="-0.905509769916534" y="0.00999999977648258" z="-0.288706958293915"/>
+    <IsoSpatial:Vec3 xmi:id="3514" sofa="7836" x="1.00000035762787" y="1.00000035762787" z="0.999999701976776"/>
+    <IsoSpatial:Vec3 xmi:id="3519" sofa="7836" x="0.990002512931824" y="0.990002512931824" z="0.990002512931824"/>
+    <IsoSpatial:Vec3 xmi:id="3524" sofa="7836" x="-5.52568101882935" y="0.413690805435181" z="1.29657185077667"/>
+    <IsoSpatial:Vec3 xmi:id="3529" sofa="7836" x="-0.905509769916534" y="0.00999999977648258" z="-0.288706958293915"/>
+    <IsoSpatial:Vec3 xmi:id="3534" sofa="7836" x="1.0" y="1.0" z="1.0"/>
+    <IsoSpatial:Vec3 xmi:id="3539" sofa="7836" x="1.0" y="1.0" z="1.00000023841858"/>
+    <IsoSpatial:Vec3 xmi:id="3544" sofa="7836" x="-0.905509769916534" y="0.00999999977648258" z="-0.288706958293915"/>
+    <IsoSpatial:Vec3 xmi:id="3549" sofa="7836" x="0.871944665908813" y="0.871944665908813" z="0.871943831443787"/>
+    <IsoSpatial:Vec3 xmi:id="3554" sofa="7836" x="0.999999940395355" y="1.00000011920929" z="0.999999940395355"/>
+    <IsoSpatial:Vec3 xmi:id="3559" sofa="7836" x="-5.96500253677368" y="0.730054557323456" z="1.62011981010437"/>
+    <IsoSpatial:Vec3 xmi:id="3564" sofa="7836" x="-0.905509769916534" y="0.00999999977648258" z="-0.288706958293915"/>
+    <IsoSpatial:Vec3 xmi:id="3569" sofa="7836" x="1.0" y="1.0" z="1.0"/>
+    <IsoSpatial:Vec3 xmi:id="3574" sofa="7836" x="1.0" y="1.0" z="1.0"/>
+    <IsoSpatial:Vec3 xmi:id="3579" sofa="7836" x="-6.43816041946411" y="0.0753002986311913" z="1.70293021202087"/>
+    <IsoSpatial:Vec3 xmi:id="3584" sofa="7836" x="-0.905509769916534" y="0.00999999977648258" z="-0.288706958293915"/>
+    <IsoSpatial:Vec3 xmi:id="3589" sofa="7836" x="-4.11720180511475" y="0.00184419751167297" z="4.86796951293945"/>
+    <IsoSpatial:Vec3 xmi:id="3594" sofa="7836" x="-6.41513872146606" y="0.0239717364311218" z="7.52737951278687"/>
+    <IsoSpatial:Vec3 xmi:id="3599" sofa="7836" x="-6.50764417648315" y="0.0969757437705994" z="2.01563453674316"/>
+    <IsoSpatial:Vec3 xmi:id="3604" sofa="7836" x="-4.80192470550537" y="0.556135654449463" z="1.56589412689209"/>
+    <IsoSpatial:Vec3 xmi:id="3609" sofa="7836" x="-0.905509769916534" y="0.00999999977648258" z="-0.288706958293915"/>
+    <IsoSpatial:Vec3 xmi:id="3614" sofa="7836" x="1.0" y="1.0" z="1.0"/>
+    <IsoSpatial:Vec3 xmi:id="3619" sofa="7836" x="-0.905509769916534" y="0.00999999977648258" z="-0.288706958293915"/>
+    <IsoSpatial:Vec3 xmi:id="3624" sofa="7836" x="-0.952739000320435" y="0.508015155792236" z="0.0662400871515274"/>
+    <IsoSpatial:Vec3 xmi:id="3629" sofa="7836" x="1.0" y="1.0" z="1.0"/>
+    <IsoSpatial:Vec3 xmi:id="3634" sofa="7836" x="1.0" y="1.0" z="1.0"/>
+    <IsoSpatial:Vec3 xmi:id="3639" sofa="7836" x="-6.06204175949097" y="1.0107626914978" z="1.23923778533936"/>
+    <IsoSpatial:Vec3 xmi:id="3644" sofa="7836" x="-3.92328143119812" y="0.0128753185272217" z="3.14944767951965"/>
+    <IsoSpatial:Vec3 xmi:id="3649" sofa="7836" x="1.00000023841858" y="1.00000023841858" z="1.0"/>
+    <IsoSpatial:Vec3 xmi:id="3654" sofa="7836" x="1.02107799053192" y="1.02107799053192" z="1.02107799053192"/>
+    <IsoSpatial:Vec3 xmi:id="3659" sofa="7836" x="-0.905509769916534" y="0.00999999977648258" z="-0.288706958293915"/>
+    <IsoSpatial:Vec3 xmi:id="3664" sofa="7836" x="5.99821519851685" y="5.99821519851685" z="5.99821519851685"/>
+    <IsoSpatial:ObjectAttribute xmi:id="3669" sofa="7836" key="skinColor" value="#FFFFFF"/>
+    <IsoSpatial:ObjectAttribute xmi:id="3673" sofa="7836" key="model" value="HumanMaleDCS"/>
+    <IsoSpatial:ObjectAttribute xmi:id="3677" sofa="7836" key="height" value="0.5"/>
+    <IsoSpatial:ObjectAttribute xmi:id="3681" sofa="7836" key="lowerMuscle" value="0.5"/>
+    <IsoSpatial:ObjectAttribute xmi:id="3685" sofa="7836" key="lowerWeight" value="0.5"/>
+    <IsoSpatial:ObjectAttribute xmi:id="3689" sofa="7836" key="skinBlueness" value="0.5"/>
+    <IsoSpatial:ObjectAttribute xmi:id="3693" sofa="7836" key="skinGreenness" value="0.5"/>
+    <IsoSpatial:ObjectAttribute xmi:id="3697" sofa="7836" key="skinRedness" value="0.5"/>
+    <IsoSpatial:ObjectAttribute xmi:id="3701" sofa="7836" key="upperMuscle" value="0.5"/>
+    <IsoSpatial:ObjectAttribute xmi:id="3705" sofa="7836" key="upperWeight" value="0.5"/>
+    <IsoSpatial:ObjectAttribute xmi:id="3709" sofa="7836" key="foreheadPosition" value="0.5"/>
+    <IsoSpatial:ObjectAttribute xmi:id="3713" sofa="7836" key="foreheadSize" value="0.5"/>
+    <IsoSpatial:ObjectAttribute xmi:id="3717" sofa="7836" key="headSize" value="0.5"/>
+    <IsoSpatial:ObjectAttribute xmi:id="3721" sofa="7836" key="headWidth" value="0.5"/>
+    <IsoSpatial:ObjectAttribute xmi:id="3725" sofa="7836" key="neckThickness" value="0.5"/>
+    <IsoSpatial:ObjectAttribute xmi:id="3729" sofa="7836" key="cheekPosition" value="0.5"/>
+    <IsoSpatial:ObjectAttribute xmi:id="3733" sofa="7836" key="cheekSize" value="0.5"/>
+    <IsoSpatial:ObjectAttribute xmi:id="3737" sofa="7836" key="lowCheekPosition" value="0.5"/>
+    <IsoSpatial:ObjectAttribute xmi:id="3741" sofa="7836" key="lowCheekPronounced" value="0.5"/>
+    <IsoSpatial:ObjectAttribute xmi:id="3745" sofa="7836" key="armLength" value="0.5"/>
+    <IsoSpatial:ObjectAttribute xmi:id="3749" sofa="7836" key="armWidth" value="0.5"/>
+    <IsoSpatial:ObjectAttribute xmi:id="3753" sofa="7836" key="forearmLength" value="0.5"/>
+    <IsoSpatial:ObjectAttribute xmi:id="3757" sofa="7836" key="forearmWidth" value="0.5"/>
+    <IsoSpatial:ObjectAttribute xmi:id="3761" sofa="7836" key="handsSize" value="0.5"/>
+    <IsoSpatial:ObjectAttribute xmi:id="3765" sofa="7836" key="feetSize" value="0.5"/>
+    <IsoSpatial:ObjectAttribute xmi:id="3769" sofa="7836" key="legSeparation" value="0.5"/>
+    <IsoSpatial:ObjectAttribute xmi:id="3773" sofa="7836" key="legsSize" value="0.5"/>
+    <IsoSpatial:ObjectAttribute xmi:id="3777" sofa="7836" key="chinPosition" value="0.5"/>
+    <IsoSpatial:ObjectAttribute xmi:id="3781" sofa="7836" key="chinPronounced" value="0.5"/>
+    <IsoSpatial:ObjectAttribute xmi:id="3785" sofa="7836" key="chinSize" value="0.5"/>
+    <IsoSpatial:ObjectAttribute xmi:id="3789" sofa="7836" key="jawsPosition" value="0.5"/>
+    <IsoSpatial:ObjectAttribute xmi:id="3793" sofa="7836" key="jawsSize" value="0.5"/>
+    <IsoSpatial:ObjectAttribute xmi:id="3797" sofa="7836" key="lipsSize" value="0.5"/>
+    <IsoSpatial:ObjectAttribute xmi:id="3801" sofa="7836" key="mandibleSize" value="0.5"/>
+    <IsoSpatial:ObjectAttribute xmi:id="3805" sofa="7836" key="mouthSize" value="0.5"/>
+    <IsoSpatial:ObjectAttribute xmi:id="3809" sofa="7836" key="noseCurve" value="0.5"/>
+    <IsoSpatial:ObjectAttribute xmi:id="3813" sofa="7836" key="noseFlatten" value="0.5"/>
+    <IsoSpatial:ObjectAttribute xmi:id="3817" sofa="7836" key="noseInclination" value="0.5"/>
+    <IsoSpatial:ObjectAttribute xmi:id="3821" sofa="7836" key="nosePosition" value="0.5"/>
+    <IsoSpatial:ObjectAttribute xmi:id="3825" sofa="7836" key="nosePronounced" value="0.5"/>
+    <IsoSpatial:ObjectAttribute xmi:id="3829" sofa="7836" key="noseSize" value="0.5"/>
+    <IsoSpatial:ObjectAttribute xmi:id="3833" sofa="7836" key="noseWidth" value="0.5"/>
+    <IsoSpatial:ObjectAttribute xmi:id="3837" sofa="7836" key="earsPosition" value="0.5"/>
+    <IsoSpatial:ObjectAttribute xmi:id="3841" sofa="7836" key="earsRotation" value="0.5"/>
+    <IsoSpatial:ObjectAttribute xmi:id="3845" sofa="7836" key="earsSize" value="0.5"/>
+    <IsoSpatial:ObjectAttribute xmi:id="3849" sofa="7836" key="eyeRotation" value="0.5"/>
+    <IsoSpatial:ObjectAttribute xmi:id="3853" sofa="7836" key="eyeSpacing" value="0.5"/>
+    <IsoSpatial:ObjectAttribute xmi:id="3857" sofa="7836" key="eyeSize" value="0.5"/>
+    <IsoSpatial:ObjectAttribute xmi:id="3861" sofa="7836" key="Hair" value="None"/>
+    <IsoSpatial:ObjectAttribute xmi:id="3865" sofa="7836" key="Chest" value="MaleShirt2"/>
+    <IsoSpatial:ObjectAttribute xmi:id="3869" sofa="7836" key="Legs" value="MaleShorts1"/>
+    <IsoSpatial:ObjectAttribute xmi:id="3873" sofa="7836" key="Underwear" value="None"/>
+    <IsoSpatial:ObjectAttribute xmi:id="3877" sofa="7836" key="Beard" value="None"/>
+    <IsoSpatial:ObjectAttribute xmi:id="3881" sofa="7836" key="Eyebrow" value="None"/>
+    <IsoSpatial:ObjectAttribute xmi:id="3885" sofa="7836" key="Eyes" value="None"/>
+    <IsoSpatial:ObjectAttribute xmi:id="3889" sofa="7836" key="Face" value="None"/>
+    <IsoSpatial:ObjectAttribute xmi:id="3893" sofa="7836" key="Hands" value="None"/>
+    <IsoSpatial:ObjectAttribute xmi:id="3897" sofa="7836" key="belly" value="0.5"/>
+    <IsoSpatial:ObjectAttribute xmi:id="3901" sofa="7836" key="breastSize" value="0.5"/>
+    <IsoSpatial:ObjectAttribute xmi:id="3905" sofa="7836" key="gluteusSize" value="0.5"/>
+    <IsoSpatial:ObjectAttribute xmi:id="3909" sofa="7836" key="waist" value="0.5"/>
+    <meta:MetaLink xmi:id="3913" sofa="7836" comment="null" figure="2109" ground="2480" rel_type="SUBCOREFENCE"/>
+    <meta:MetaLink xmi:id="3920" sofa="7836" comment="null" figure="2399" ground="2480" rel_type="SUBCOREFENCE"/>
+    <meta:MetaLink xmi:id="3927" sofa="7836" comment="null" figure="2204" ground="2480" rel_type="SUBCOREFENCE"/>
+    <meta:MetaLink xmi:id="3934" sofa="7836" comment="null" figure="2363" ground="2480" rel_type="SUBCOREFENCE"/>
+    <meta:MetaLink xmi:id="3941" sofa="7836" comment="null" figure="2303" ground="2109" rel_type="SUBCOREFENCE"/>
+    <meta:MetaLink xmi:id="3948" sofa="7836" comment="null" figure="2141" ground="2109" rel_type="SUBCOREFENCE"/>
+    <meta:MetaLink xmi:id="3955" sofa="7836" comment="null" figure="2172" ground="2399" rel_type="SUBCOREFENCE"/>
+    <meta:MetaLink xmi:id="3962" sofa="7836" comment="null" figure="2333" ground="2141" rel_type="SUBCOREFENCE"/>
+    <meta:MetaLink xmi:id="3969" sofa="7836" comment="null" figure="2269" ground="2141" rel_type="SUBCOREFENCE"/>
+    <meta:MetaLink xmi:id="3976" sofa="7836" comment="null" figure="2234" ground="2141" rel_type="SUBCOREFENCE"/>
+    <isospace:OLink xmi:id="3983" sofa="7836" comment="null" figure="2059" ground="2567" rel_type="On"
+                    projective="false"/>
+    <isospace:OLink xmi:id="3994" sofa="7836" comment="null" figure="2642" ground="2692" rel_type="In Front of"
+                    projective="false"/>
+    <isospace:QsLink xmi:id="4005" sofa="7836" comment="null" figure="2567" ground="2667" rel_type="IN"/>
+    <isospace:QsLink xmi:id="4012" sofa="7836" comment="null" figure="2059" ground="2567" rel_type="EC"/>
+    <isospace:QsLink xmi:id="4019" sofa="7836" comment="null" figure="2480" ground="2084" rel_type="EC"/>
+    <isospace:QsLink xmi:id="4026" sofa="7836" comment="null" figure="2642" ground="2692" rel_type="EC"/>
+    <isospace:EventPath xmi:id="4033" sofa="7836" begin="38" end="42" object_id="abstractvolume" position="3624"
+                        rotation="3345" scale="3649" dcl="false" countable="false" cardinality="0.0" startID="2430"
+                        midID_array="2667" endID="2692"/>
+    <tcas:DocumentAnnotation xmi:id="4069" sofa="7843" begin="0" end="231" language="en"/>
+    <type5:Sentence xmi:id="4074" sofa="7843" begin="0" end="43"/>
+    <type5:Sentence xmi:id="4079" sofa="7843" begin="44" end="84"/>
+    <type5:Sentence xmi:id="4084" sofa="7843" begin="85" end="149"/>
+    <type5:Sentence xmi:id="4089" sofa="7843" begin="150" end="231"/>
+    <type5:Token xmi:id="4094" sofa="7843" begin="0" end="9" order="0"/>
+    <type5:Token xmi:id="4107" sofa="7843" begin="10" end="12" order="0"/>
+    <type5:Token xmi:id="4120" sofa="7843" begin="13" end="16" order="0"/>
+    <type5:Token xmi:id="4133" sofa="7843" begin="17" end="19" order="0"/>
+    <type5:Token xmi:id="4146" sofa="7843" begin="20" end="23" order="0"/>
+    <type5:Token xmi:id="4159" sofa="7843" begin="24" end="28" order="0"/>
+    <type5:Token xmi:id="4172" sofa="7843" begin="29" end="34" order="0"/>
+    <type5:Token xmi:id="4185" sofa="7843" begin="35" end="37" order="0"/>
+    <type5:Token xmi:id="4198" sofa="7843" begin="38" end="42" order="0"/>
+    <type5:Token xmi:id="4211" sofa="7843" begin="42" end="43" order="0"/>
+    <type5:Token xmi:id="4224" sofa="7843" begin="44" end="46" order="0"/>
+    <type5:Token xmi:id="4237" sofa="7843" begin="47" end="50" order="0"/>
+    <type5:Token xmi:id="4250" sofa="7843" begin="51" end="59" order="0"/>
+    <type5:Token xmi:id="4263" sofa="7843" begin="60" end="62" order="0"/>
+    <type5:Token xmi:id="4276" sofa="7843" begin="63" end="66" order="0"/>
+    <type5:Token xmi:id="4289" sofa="7843" begin="67" end="72" order="0"/>
+    <type5:Token xmi:id="4302" sofa="7843" begin="73" end="76" order="0"/>
+    <type5:Token xmi:id="4315" sofa="7843" begin="77" end="78" order="0"/>
+    <type5:Token xmi:id="4328" sofa="7843" begin="79" end="83" order="0"/>
+    <type5:Token xmi:id="4341" sofa="7843" begin="83" end="84" order="0"/>
+    <type5:Token xmi:id="4354" sofa="7843" begin="85" end="88" order="0"/>
+    <type5:Token xmi:id="4367" sofa="7843" begin="89" end="94" order="0"/>
+    <type5:Token xmi:id="4380" sofa="7843" begin="95" end="97" order="0"/>
+    <type5:Token xmi:id="4393" sofa="7843" begin="98" end="103" order="0"/>
+    <type5:Token xmi:id="4406" sofa="7843" begin="104" end="106" order="0"/>
+    <type5:Token xmi:id="4419" sofa="7843" begin="107" end="111" order="0"/>
+    <type5:Token xmi:id="4432" sofa="7843" begin="112" end="117" order="0"/>
+    <type5:Token xmi:id="4445" sofa="7843" begin="118" end="120" order="0"/>
+    <type5:Token xmi:id="4458" sofa="7843" begin="121" end="125" order="0"/>
+    <type5:Token xmi:id="4471" sofa="7843" begin="125" end="126" order="0"/>
+    <type5:Token xmi:id="4484" sofa="7843" begin="127" end="129" order="0"/>
+    <type5:Token xmi:id="4497" sofa="7843" begin="130" end="133" order="0"/>
+    <type5:Token xmi:id="4510" sofa="7843" begin="134" end="140" order="0"/>
+    <type5:Token xmi:id="4523" sofa="7843" begin="141" end="148" order="0"/>
+    <type5:Token xmi:id="4536" sofa="7843" begin="148" end="149" order="0"/>
+    <type5:Token xmi:id="4549" sofa="7843" begin="150" end="158" order="0"/>
+    <type5:Token xmi:id="4562" sofa="7843" begin="159" end="160" order="0"/>
+    <type5:Token xmi:id="4575" sofa="7843" begin="161" end="166" order="0"/>
+    <type5:Token xmi:id="4588" sofa="7843" begin="167" end="171" order="0"/>
+    <type5:Token xmi:id="4601" sofa="7843" begin="172" end="181" order="0"/>
+    <type5:Token xmi:id="4614" sofa="7843" begin="182" end="186" order="0"/>
+    <type5:Token xmi:id="4627" sofa="7843" begin="187" end="190" order="0"/>
+    <type5:Token xmi:id="4640" sofa="7843" begin="191" end="195" order="0"/>
+    <type5:Token xmi:id="4653" sofa="7843" begin="196" end="199" order="0"/>
+    <type5:Token xmi:id="4666" sofa="7843" begin="200" end="205" order="0"/>
+    <type5:Token xmi:id="4679" sofa="7843" begin="206" end="208" order="0"/>
+    <type5:Token xmi:id="4692" sofa="7843" begin="209" end="213" order="0"/>
+    <type5:Token xmi:id="4705" sofa="7843" begin="214" end="216" order="0"/>
+    <type5:Token xmi:id="4718" sofa="7843" begin="217" end="220" order="0"/>
+    <type5:Token xmi:id="4731" sofa="7843" begin="221" end="226" order="0"/>
+    <type5:Token xmi:id="4744" sofa="7843" begin="227" end="230" order="0"/>
+    <type5:Token xmi:id="4757" sofa="7843" begin="230" end="231" order="0"/>
+    <type16:QuickTreeNode xmi:id="4770" sofa="7843" create="0" modified="0" begin="0" end="9"/>
+    <type16:QuickTreeNode xmi:id="4782" sofa="7843" create="0" modified="0" begin="10" end="12"/>
+    <type16:QuickTreeNode xmi:id="4794" sofa="7843" create="0" modified="0" begin="13" end="16"/>
+    <type16:QuickTreeNode xmi:id="4806" sofa="7843" create="0" modified="0" begin="17" end="19"/>
+    <type16:QuickTreeNode xmi:id="4818" sofa="7843" create="0" modified="0" begin="20" end="23"/>
+    <type16:QuickTreeNode xmi:id="4830" sofa="7843" create="0" modified="0" begin="24" end="28"/>
+    <type16:QuickTreeNode xmi:id="4842" sofa="7843" create="0" modified="0" begin="29" end="34"/>
+    <type16:QuickTreeNode xmi:id="4854" sofa="7843" create="0" modified="0" begin="35" end="37"/>
+    <type16:QuickTreeNode xmi:id="4866" sofa="7843" create="0" modified="0" begin="38" end="42"/>
+    <type16:QuickTreeNode xmi:id="4878" sofa="7843" create="0" modified="0" begin="42" end="43"/>
+    <type16:QuickTreeNode xmi:id="4890" sofa="7843" create="0" modified="0" begin="44" end="46"/>
+    <type16:QuickTreeNode xmi:id="4902" sofa="7843" create="0" modified="0" begin="47" end="50"/>
+    <type16:QuickTreeNode xmi:id="4914" sofa="7843" create="0" modified="0" begin="51" end="59"/>
+    <type16:QuickTreeNode xmi:id="4926" sofa="7843" create="0" modified="0" begin="60" end="62"/>
+    <type16:QuickTreeNode xmi:id="4938" sofa="7843" create="0" modified="0" begin="63" end="66"/>
+    <type16:QuickTreeNode xmi:id="4950" sofa="7843" create="0" modified="0" begin="67" end="72"/>
+    <type16:QuickTreeNode xmi:id="4962" sofa="7843" create="0" modified="0" begin="73" end="76"/>
+    <type16:QuickTreeNode xmi:id="4974" sofa="7843" create="0" modified="0" begin="77" end="78"/>
+    <type16:QuickTreeNode xmi:id="4986" sofa="7843" create="0" modified="0" begin="79" end="83"/>
+    <type16:QuickTreeNode xmi:id="4998" sofa="7843" create="0" modified="0" begin="83" end="84"/>
+    <type16:QuickTreeNode xmi:id="5010" sofa="7843" create="0" modified="0" begin="85" end="88"/>
+    <type16:QuickTreeNode xmi:id="5022" sofa="7843" create="0" modified="0" begin="89" end="94"/>
+    <type16:QuickTreeNode xmi:id="5034" sofa="7843" create="0" modified="0" begin="95" end="97"/>
+    <type16:QuickTreeNode xmi:id="5046" sofa="7843" create="0" modified="0" begin="98" end="103"/>
+    <type16:QuickTreeNode xmi:id="5058" sofa="7843" create="0" modified="0" begin="104" end="106"/>
+    <type16:QuickTreeNode xmi:id="5070" sofa="7843" create="0" modified="0" begin="107" end="111"/>
+    <type16:QuickTreeNode xmi:id="5082" sofa="7843" create="0" modified="0" begin="112" end="117"/>
+    <type16:QuickTreeNode xmi:id="5094" sofa="7843" create="0" modified="0" begin="118" end="120"/>
+    <type16:QuickTreeNode xmi:id="5106" sofa="7843" create="0" modified="0" begin="121" end="125"/>
+    <type16:QuickTreeNode xmi:id="5118" sofa="7843" create="0" modified="0" begin="125" end="126"/>
+    <type16:QuickTreeNode xmi:id="5130" sofa="7843" create="0" modified="0" begin="127" end="129"/>
+    <type16:QuickTreeNode xmi:id="5142" sofa="7843" create="0" modified="0" begin="130" end="133"/>
+    <type16:QuickTreeNode xmi:id="5154" sofa="7843" create="0" modified="0" begin="134" end="140"/>
+    <type16:QuickTreeNode xmi:id="5166" sofa="7843" create="0" modified="0" begin="141" end="148"/>
+    <type16:QuickTreeNode xmi:id="5178" sofa="7843" create="0" modified="0" begin="148" end="149"/>
+    <type16:QuickTreeNode xmi:id="5190" sofa="7843" create="0" modified="0" begin="150" end="158"/>
+    <type16:QuickTreeNode xmi:id="5202" sofa="7843" create="0" modified="0" begin="159" end="160"/>
+    <type16:QuickTreeNode xmi:id="5214" sofa="7843" create="0" modified="0" begin="161" end="166"/>
+    <type16:QuickTreeNode xmi:id="5226" sofa="7843" create="0" modified="0" parent="5394" begin="167" end="171"/>
+    <type16:QuickTreeNode xmi:id="5238" sofa="7843" create="0" modified="0" parent="5394" begin="172" end="181"/>
+    <type16:QuickTreeNode xmi:id="5250" sofa="7843" create="0" modified="0" begin="182" end="186"/>
+    <type16:QuickTreeNode xmi:id="5262" sofa="7843" create="0" modified="0" begin="187" end="190"/>
+    <type16:QuickTreeNode xmi:id="5274" sofa="7843" create="0" modified="0" begin="191" end="195"/>
+    <type16:QuickTreeNode xmi:id="5286" sofa="7843" create="0" modified="0" begin="196" end="199"/>
+    <type16:QuickTreeNode xmi:id="5298" sofa="7843" create="0" modified="0" begin="200" end="205"/>
+    <type16:QuickTreeNode xmi:id="5310" sofa="7843" create="0" modified="0" begin="206" end="208"/>
+    <type16:QuickTreeNode xmi:id="5322" sofa="7843" create="0" modified="0" begin="209" end="213"/>
+    <type16:QuickTreeNode xmi:id="5334" sofa="7843" create="0" modified="0" begin="214" end="216"/>
+    <type16:QuickTreeNode xmi:id="5346" sofa="7843" create="0" modified="0" begin="217" end="220"/>
+    <type16:QuickTreeNode xmi:id="5358" sofa="7843" create="0" modified="0" parent="5410" begin="221" end="226"/>
+    <type16:QuickTreeNode xmi:id="5370" sofa="7843" create="0" modified="0" parent="5410" begin="227" end="230"/>
+    <type16:QuickTreeNode xmi:id="5382" sofa="7843" create="0" modified="0" begin="230" end="231"/>
+    <type16:QuickTreeNode xmi:id="5394" sofa="7843" create="0" modified="0" children="5226 5238" begin="167" end="181"/>
+    <type16:QuickTreeNode xmi:id="5410" sofa="7843" create="0" modified="0" children="5358 5370" begin="221" end="230"/>
+    <IsoSpatial:Vec4 xmi:id="5426" sofa="7843" x="0.0" y="0.0" z="0.0" w="1.0"/>
+    <IsoSpatial:Vec4 xmi:id="5432" sofa="7843" x="0.0" y="0.0" z="0.0" w="1.0"/>
+    <IsoSpatial:Vec4 xmi:id="5438" sofa="7843" x="-4.27648774348199E-4" y="1.1540946434252E-4" z="1.54180976096541E-4"
+                     w="0.99999988079071"/>
+    <IsoSpatial:Vec4 xmi:id="5444" sofa="7843" x="-0.0100179314613342" y="-1.09940767288208E-4" z="0.00329936295747757"
+                     w="0.999944388866425"/>
+    <IsoSpatial:Vec4 xmi:id="5450" sofa="7843" x="0.00246478291228414" y="0.0078786900267005" z="7.38717848435044E-4"
+                     w="0.999965727329254"/>
+    <IsoSpatial:Vec4 xmi:id="5456" sofa="7843" x="-0.74607527256012" y="0.00469253212213516" z="0.665794849395752"
+                     w="0.00817953795194626"/>
+    <IsoSpatial:Vec4 xmi:id="5462" sofa="7843" x="0.346206784248352" y="-0.135193631052971" z="-0.0504912137985229"
+                     w="-0.926992058753967"/>
+    <IsoSpatial:Vec4 xmi:id="5468" sofa="7843" x="0.0" y="0.0" z="0.0" w="1.0"/>
+    <IsoSpatial:Vec4 xmi:id="5474" sofa="7843" x="0.0" y="0.0" z="0.0" w="1.0"/>
+    <IsoSpatial:Vec4 xmi:id="5480" sofa="7843" x="-0.768296241760254" y="0.00657578930258751" z="-0.640060722827911"
+                     w="3.91453504562378E-5"/>
+    <IsoSpatial:Vec4 xmi:id="5486" sofa="7843" x="0.0" y="0.0" z="0.0" w="1.0"/>
+    <IsoSpatial:Vec4 xmi:id="5492" sofa="7843" x="0.0" y="0.0" z="0.0" w="1.0"/>
+    <IsoSpatial:Vec4 xmi:id="5498" sofa="7843" x="0.00937120150774717" y="-0.0122497566044331" z="-0.0129745900630951"
+                     w="0.999796867370605"/>
+    <IsoSpatial:Vec4 xmi:id="5504" sofa="7843" x="0.600560665130615" y="0.66485208272934" z="-0.348301410675049"
+                     w="-0.275653392076492"/>
+    <IsoSpatial:Vec4 xmi:id="5510" sofa="7843" x="0.0" y="0.0" z="0.0" w="1.0"/>
+    <IsoSpatial:Vec4 xmi:id="5516" sofa="7843" x="6.38626341242343E-4" y="0.723038792610168" z="-0.0019359482685104"
+                     w="0.690804541110992"/>
+    <IsoSpatial:Vec4 xmi:id="5522" sofa="7843" x="0.0" y="0.0" z="0.0" w="1.0"/>
+    <IsoSpatial:Vec4 xmi:id="5528" sofa="7843" x="0.0" y="0.0" z="0.0" w="1.0"/>
+    <IsoSpatial:Vec4 xmi:id="5534" sofa="7843" x="0.0" y="0.0" z="0.0" w="1.0"/>
+    <IsoSpatial:Vec4 xmi:id="5540" sofa="7843" x="0.0" y="0.0" z="0.0" w="1.0"/>
+    <IsoSpatial:Vec4 xmi:id="5546" sofa="7843" x="8.23881302494556E-4" y="0.512401521205902" z="0.00482279248535633"
+                     w="-0.858732044696808"/>
+    <IsoSpatial:Vec4 xmi:id="5552" sofa="7843" x="-0.0017130741616711" y="1.72331929206848E-4" z="-6.85938633978367E-4"
+                     w="0.999998331069946"/>
+    <IsoSpatial:Vec4 xmi:id="5558" sofa="7843" x="0.0" y="0.0" z="0.0" w="1.0"/>
+    <IsoSpatial:Vec4 xmi:id="5564" sofa="7843" x="-0.00174200534820557" y="1.43706798553467E-4" z="2.74404941592366E-4"
+                     w="0.999998450279236"/>
+    <IsoSpatial:Vec4 xmi:id="5570" sofa="7843" x="-0.686822950839996" y="0.00472715497016907" z="-0.0252414792776108"
+                     w="0.726371049880981"/>
+    <IsoSpatial:Vec4 xmi:id="5576" sofa="7843" x="0.016790933907032" y="-0.0117597701027989" z="-0.039588887244463"
+                     w="0.999005794525146"/>
+    <IsoSpatial:Vec3 xmi:id="5582" sofa="7843" x="2.86602759361267" y="2.8660249710083" z="2.86602473258972"/>
+    <IsoSpatial:Vec3 xmi:id="5587" sofa="7843" x="1.0" y="1.0" z="1.0"/>
+    <IsoSpatial:Vec3 xmi:id="5592" sofa="7843" x="-0.236643373966217" y="0.00999999977648258" z="-1.16784572601318"/>
+    <IsoSpatial:Vec3 xmi:id="5597" sofa="7843" x="1.55556774139404" y="0.539183139801025" z="-2.42448902130127"/>
+    <IsoSpatial:Vec3 xmi:id="5602" sofa="7843" x="1.0" y="1.0" z="1.0"/>
+    <IsoSpatial:Vec3 xmi:id="5607" sofa="7843" x="1.0" y="1.0" z="1.0"/>
+    <IsoSpatial:Vec3 xmi:id="5612" sofa="7843" x="1.42407464981079" y="0.112433761358261" z="0.186291694641113"/>
+    <IsoSpatial:Vec3 xmi:id="5617" sofa="7843" x="1.03912782669067" y="0.232224851846695" z="-2.39245462417603"/>
+    <IsoSpatial:Vec3 xmi:id="5622" sofa="7843" x="-1.18049156665802" y="1.0453999042511" z="-1.2733405828476"/>
+    <IsoSpatial:Vec3 xmi:id="5627" sofa="7843" x="0.724957883358002" y="0.724957346916199" z="0.724957704544067"/>
+    <IsoSpatial:Vec3 xmi:id="5632" sofa="7843" x="1.0" y="1.0" z="1.0"/>
+    <IsoSpatial:Vec3 xmi:id="5637" sofa="7843" x="0.564900696277618" y="0.564900517463684" z="0.564900696277618"/>
+    <IsoSpatial:Vec3 xmi:id="5642" sofa="7843" x="1.0" y="1.0" z="1.00000011920929"/>
+    <IsoSpatial:Vec3 xmi:id="5647" sofa="7843" x="0.607255578041077" y="0.113903015851974" z="-2.7931022644043"/>
+    <IsoSpatial:Vec3 xmi:id="5652" sofa="7843" x="1.0" y="1.00000011920929" z="1.00000011920929"/>
+    <IsoSpatial:Vec3 xmi:id="5657" sofa="7843" x="1.0" y="1.0" z="1.0"/>
+    <IsoSpatial:Vec3 xmi:id="5662" sofa="7843" x="1.01823008060455" y="1.01823246479034" z="1.01823139190674"/>
+    <IsoSpatial:Vec3 xmi:id="5667" sofa="7843" x="0.856953263282776" y="0.244442135095596" z="-2.38230586051941"/>
+    <IsoSpatial:Vec3 xmi:id="5672" sofa="7843" x="10.0000038146973" y="9.99999332427979" z="9.99999904632568"/>
+    <IsoSpatial:Vec3 xmi:id="5677" sofa="7843" x="-0.536235332489014" y="0.360251635313034" z="-3.26983404159546"/>
+    <IsoSpatial:Vec3 xmi:id="5682" sofa="7843" x="0.999999940395355" y="1.0" z="1.0"/>
+    <IsoSpatial:Vec3 xmi:id="5687" sofa="7843" x="1.0" y="1.0" z="1.0"/>
+    <IsoSpatial:Vec3 xmi:id="5692" sofa="7843" x="1.34260654449463" y="0.547391593456268" z="-2.73231077194214"/>
+    <IsoSpatial:Vec3 xmi:id="5697" sofa="7843" x="1.0" y="1.0" z="1.0"/>
+    <IsoSpatial:Vec3 xmi:id="5702" sofa="7843" x="0.999999940395355" y="0.999999821186066" z="0.99999988079071"/>
+    <IsoSpatial:Vec3 xmi:id="5707" sofa="7843" x="1.0" y="1.0" z="1.0"/>
+    <IsoSpatial:Vec3 xmi:id="5712" sofa="7843" x="-0.27216824889183" y="1.01084804534912" z="-0.33194899559021"/>
+    <IsoSpatial:Vec3 xmi:id="5717" sofa="7843" x="-0.236643373966217" y="0.00999999977648258" z="-1.16784572601318"/>
+    <IsoSpatial:Vec3 xmi:id="5722" sofa="7843" x="0.84878671169281" y="0.848787307739258" z="0.848787248134613"/>
+    <IsoSpatial:Vec3 xmi:id="5727" sofa="7843" x="0.926398158073425" y="0.252023667097092" z="-2.34131860733032"/>
+    <IsoSpatial:Vec3 xmi:id="5732" sofa="7843" x="1.556307554245" y="0.954600691795349" z="-3.56749224662781"/>
+    <IsoSpatial:Vec3 xmi:id="5737" sofa="7843" x="1.0" y="1.0" z="1.0"/>
+    <IsoSpatial:Vec3 xmi:id="5742" sofa="7843" x="-0.236643373966217" y="0.00999999977648258" z="-1.16784572601318"/>
+    <IsoSpatial:Vec3 xmi:id="5747" sofa="7843" x="1.60931694507599" y="0.510119616985321" z="-3.11839509010315"/>
+    <IsoSpatial:Vec3 xmi:id="5752" sofa="7843" x="-0.236643373966217" y="0.00999999977648258" z="-1.16784572601318"/>
+    <IsoSpatial:Vec3 xmi:id="5757" sofa="7843" x="0.443608701229095" y="0.220391049981117" z="-1.27675485610962"/>
+    <IsoSpatial:Vec3 xmi:id="5762" sofa="7843" x="0.798338294029236" y="0.798337996006012" z="0.798337996006012"/>
+    <IsoSpatial:Vec3 xmi:id="5767" sofa="7843" x="1.0" y="1.0" z="1.0"/>
+    <IsoSpatial:Vec3 xmi:id="5772" sofa="7843" x="1.0" y="1.0" z="1.00000011920929"/>
+    <IsoSpatial:Vec3 xmi:id="5777" sofa="7843" x="-0.236643373966217" y="0.00999999977648258" z="-1.16784572601318"/>
+    <IsoSpatial:Vec3 xmi:id="5782" sofa="7843" x="-0.448692798614502" y="0.882749557495117" z="-3.47791314125061"/>
+    <IsoSpatial:Vec3 xmi:id="5787" sofa="7843" x="-0.236643373966217" y="0.00999999977648258" z="-1.16784572601318"/>
+    <IsoSpatial:Vec3 xmi:id="5792" sofa="7843" x="1.30424630641937" y="0.59416127204895" z="-2.96538734436035"/>
+    <IsoSpatial:Vec3 xmi:id="5797" sofa="7843" x="-0.236643373966217" y="0.00999999977648258" z="-1.16784572601318"/>
+    <IsoSpatial:Vec3 xmi:id="5802" sofa="7843" x="0.430863857269287" y="0.186873897910118" z="-0.622113704681396"/>
+    <IsoSpatial:Vec3 xmi:id="5807" sofa="7843" x="0.358804166316986" y="0.358804166316986" z="0.358804196119308"/>
+    <IsoSpatial:Vec3 xmi:id="5812" sofa="7843" x="1.0" y="1.0" z="1.0"/>
+    <IsoSpatial:Vec3 xmi:id="5817" sofa="7843" x="-0.236643373966217" y="0.00999999977648258" z="-1.16784572601318"/>
+    <IsoSpatial:Vec3 xmi:id="5822" sofa="7843" x="0.81087201833725" y="0.810871779918671" z="0.810871660709381"/>
+    <IsoSpatial:Vec3 xmi:id="5827" sofa="7843" x="-0.236643373966217" y="0.00999999977648258" z="-1.16784572601318"/>
+    <IsoSpatial:Vec3 xmi:id="5832" sofa="7843" x="-0.236643373966217" y="0.00999999977648258" z="-1.16784572601318"/>
+    <IsoSpatial:Vec3 xmi:id="5837" sofa="7843" x="1.0" y="1.0" z="1.0"/>
+    <isospace:Location xmi:id="5842" sofa="7843" begin="38" end="42" object_id="abstractarea" position="5612"
+                       rotation="5444" scale="5672" dcl="false" countable="false" cardinality="0.0"/>
+    <isospace:Location xmi:id="5868" sofa="7843" begin="191" end="195" dcl="false" countable="false" cardinality="0.0"/>
+    <type16:Fingerprint xmi:id="5894" sofa="7843" create="1611053733573" modified="0"
+                        user="https://authority.hucompute.org/user/268560" reference="5842"/>
+    <type16:Fingerprint xmi:id="5903" sofa="7843" create="1611054425785" modified="0"
+                        user="https://authority.hucompute.org/user/268560" reference="7442"/>
+    <type16:Fingerprint xmi:id="5912" sofa="7843" create="1611056175581" modified="0"
+                        user="https://authority.hucompute.org/user/268560" reference="6985"/>
+    <type16:Fingerprint xmi:id="5921" sofa="7843" create="1611054425785" modified="0"
+                        user="https://authority.hucompute.org/user/268560" reference="7470"/>
+    <type16:Fingerprint xmi:id="5930" sofa="7843" create="1611056393797" modified="0"
+                        user="https://authority.hucompute.org/user/268560" reference="7110"/>
+    <type16:Fingerprint xmi:id="5939" sofa="7843" create="1611054908763" modified="0"
+                        user="https://authority.hucompute.org/user/268560" reference="7657"/>
+    <type16:Fingerprint xmi:id="5948" sofa="7843" create="1611056233803" modified="0"
+                        user="https://authority.hucompute.org/user/268560" reference="6848"/>
+    <type16:Fingerprint xmi:id="5957" sofa="7843" create="1611056531824" modified="0"
+                        user="https://authority.hucompute.org/user/268560" reference="7729"/>
+    <type16:Fingerprint xmi:id="5966" sofa="7843" create="1611056756479" modified="0"
+                        user="https://authority.hucompute.org/user/268560" reference="7763"/>
+    <type16:Fingerprint xmi:id="5975" sofa="7843" create="1611056663200" modified="0"
+                        user="https://authority.hucompute.org/user/268560" reference="7568"/>
+    <type16:Fingerprint xmi:id="5984" sofa="7843" create="1611054424928" modified="0"
+                        user="https://authority.hucompute.org/user/268560" reference="6627"/>
+    <type16:Fingerprint xmi:id="5993" sofa="7843" create="1611056370657" modified="0"
+                        user="https://authority.hucompute.org/user/268560" reference="7085"/>
+    <type16:Fingerprint xmi:id="6002" sofa="7843" create="1611056637914" modified="0"
+                        user="https://authority.hucompute.org/user/268560" reference="7628"/>
+    <type16:Fingerprint xmi:id="6011" sofa="7843" create="1611056881807" modified="0"
+                        user="https://authority.hucompute.org/user/268560" reference="6873"/>
+    <type16:Fingerprint xmi:id="6020" sofa="7843" create="1611054165249" modified="0"
+                        user="https://authority.hucompute.org/user/268560" reference="7142"/>
+    <type16:Fingerprint xmi:id="6029" sofa="7843" create="1611054331505" modified="0"
+                        user="https://authority.hucompute.org/user/268560" reference="7149"/>
+    <type16:Fingerprint xmi:id="6038" sofa="7843" create="1611054424929" modified="0"
+                        user="https://authority.hucompute.org/user/268560" reference="6756"/>
+    <type16:Fingerprint xmi:id="6047" sofa="7843" create="1611054425785" modified="0"
+                        user="https://authority.hucompute.org/user/268560" reference="7484"/>
+    <type16:Fingerprint xmi:id="6056" sofa="7843" create="1611056925404" modified="0"
+                        user="https://authority.hucompute.org/user/268560" reference="7170"/>
+    <type16:Fingerprint xmi:id="6065" sofa="7843" create="1611054425785" modified="0"
+                        user="https://authority.hucompute.org/user/268560" reference="7477"/>
+    <type16:Fingerprint xmi:id="6074" sofa="7843" create="1611054424929" modified="0"
+                        user="https://authority.hucompute.org/user/268560" reference="6662"/>
+    <type16:Fingerprint xmi:id="6083" sofa="7843" create="1611054741275" modified="0"
+                        user="https://authority.hucompute.org/user/268560" reference="6960"/>
+    <type16:Fingerprint xmi:id="6092" sofa="7843" create="1611054892137" modified="0"
+                        user="https://authority.hucompute.org/user/268560" reference="7583"/>
+    <type16:Fingerprint xmi:id="6101" sofa="7843" create="1611054424929" modified="0"
+                        user="https://authority.hucompute.org/user/268560" reference="6792"/>
+    <type16:Fingerprint xmi:id="6110" sofa="7843" create="1611057004451" modified="0"
+                        user="https://authority.hucompute.org/user/268560" reference="7177"/>
+    <type16:Fingerprint xmi:id="6119" sofa="7843" create="1611054425785" modified="0"
+                        user="https://authority.hucompute.org/user/268560" reference="7428"/>
+    <type16:Fingerprint xmi:id="6128" sofa="7843" create="1611054425785" modified="0"
+                        user="https://authority.hucompute.org/user/268560" reference="7463"/>
+    <type16:Fingerprint xmi:id="6137" sofa="7843" create="1611054848600" modified="0"
+                        user="https://authority.hucompute.org/user/268560" reference="7509"/>
+    <type16:Fingerprint xmi:id="6146" sofa="7843" create="1611054078273" modified="0"
+                        user="https://authority.hucompute.org/user/268560" reference="7135"/>
+    <type16:Fingerprint xmi:id="6155" sofa="7843" create="1611054424926" modified="0"
+                        user="https://authority.hucompute.org/user/268560" reference="6534"/>
+    <type16:Fingerprint xmi:id="6164" sofa="7843" create="1611054425785" modified="0"
+                        user="https://authority.hucompute.org/user/268560" reference="7491"/>
+    <type16:Fingerprint xmi:id="6173" sofa="7843" create="1611054424926" modified="0"
+                        user="https://authority.hucompute.org/user/268560" reference="6502"/>
+    <type16:Fingerprint xmi:id="6182" sofa="7843" create="1611054425785" modified="0"
+                        user="https://authority.hucompute.org/user/268560" reference="7435"/>
+    <type16:Fingerprint xmi:id="6191" sofa="7843" create="1611054788596" modified="0"
+                        user="https://authority.hucompute.org/user/268560" reference="6823"/>
+    <type16:Fingerprint xmi:id="6200" sofa="7843" create="1611054425785" modified="0"
+                        user="https://authority.hucompute.org/user/268560" reference="7456"/>
+    <type16:Fingerprint xmi:id="6209" sofa="7843" create="1611056687424" modified="0"
+                        user="https://authority.hucompute.org/user/268560" reference="7598"/>
+    <type16:Fingerprint xmi:id="6218" sofa="7843" create="1611054937715" modified="0"
+                        user="https://authority.hucompute.org/user/268560" reference="5410"/>
+    <type16:Fingerprint xmi:id="6227" sofa="7843" create="1611053911218" modified="0"
+                        user="https://authority.hucompute.org/user/268560" reference="5868"/>
+    <type16:Fingerprint xmi:id="6236" sofa="7843" create="1611054424929" modified="0"
+                        user="https://authority.hucompute.org/user/268560" reference="6696"/>
+    <type16:Fingerprint xmi:id="6245" sofa="7843" create="1611054842828" modified="0"
+                        user="https://authority.hucompute.org/user/268560" reference="7163"/>
+    <type16:Fingerprint xmi:id="6254" sofa="7843" create="1611054904589" modified="0"
+                        user="https://authority.hucompute.org/user/268560" reference="7035"/>
+    <type16:Fingerprint xmi:id="6263" sofa="7843" create="1611054424927" modified="0"
+                        user="https://authority.hucompute.org/user/268560" reference="6565"/>
+    <type16:Fingerprint xmi:id="6272" sofa="7843" create="1611054916512" modified="0"
+                        user="https://authority.hucompute.org/user/268560" reference="7060"/>
+    <type16:Fingerprint xmi:id="6281" sofa="7843" create="1611054424925" modified="0"
+                        user="https://authority.hucompute.org/user/268560" reference="6923"/>
+    <type16:Fingerprint xmi:id="6290" sofa="7843" create="1611054599033" modified="0"
+                        user="https://authority.hucompute.org/user/268560" reference="7156"/>
+    <type16:Fingerprint xmi:id="6299" sofa="7843" create="1611054290780" modified="0"
+                        user="https://authority.hucompute.org/user/268560" reference="7010"/>
+    <type16:Fingerprint xmi:id="6308" sofa="7843" create="1611054424929" modified="0"
+                        user="https://authority.hucompute.org/user/268560" reference="6726"/>
+    <type16:Fingerprint xmi:id="6317" sofa="7843" create="1611056999362" modified="0"
+                        user="https://authority.hucompute.org/user/268560" reference="7531"/>
+    <type16:Fingerprint xmi:id="6326" sofa="7843" create="1611056973637" modified="0"
+                        user="https://authority.hucompute.org/user/268560" reference="6898"/>
+    <type16:Fingerprint xmi:id="6335" sofa="7843" create="1611054424927" modified="0"
+                        user="https://authority.hucompute.org/user/268560" reference="6597"/>
+    <type16:Fingerprint xmi:id="6344" sofa="7843" create="1611054621671" modified="0"
+                        user="https://authority.hucompute.org/user/268560" reference="7498"/>
+    <type16:Fingerprint xmi:id="6353" sofa="7843" create="1611056541599" modified="0"
+                        user="https://authority.hucompute.org/user/268560" reference="7686"/>
+    <type16:Fingerprint xmi:id="6362" sofa="7843" create="1611056711589" modified="0"
+                        user="https://authority.hucompute.org/user/268560" reference="7613"/>
+    <type16:Fingerprint xmi:id="6371" sofa="7843" create="1611053931586" modified="0"
+                        user="https://authority.hucompute.org/user/268560" reference="6477"/>
+    <type16:Fingerprint xmi:id="6380" sofa="7843" create="1611054920375" modified="0"
+                        user="https://authority.hucompute.org/user/268560" reference="7715"/>
+    <type16:Fingerprint xmi:id="6389" sofa="7843" create="1611054928778" modified="0"
+                        user="https://authority.hucompute.org/user/268560" reference="5394"/>
+    <type16:Fingerprint xmi:id="6398" sofa="7843" create="1611054425785" modified="0"
+                        user="https://authority.hucompute.org/user/268560" reference="7449"/>
+    <type16:Fingerprint xmi:id="6407" sofa="7843" create="1611054897561" modified="0"
+                        user="https://authority.hucompute.org/user/268560" reference="7553"/>
+    <type16:Fingerprint xmi:id="6416" sofa="7843" create="1611053773125" modified="0"
+                        user="https://authority.hucompute.org/user/268560" reference="6452"/>
+    <type16:Fingerprint xmi:id="6425" sofa="7843" create="1611056916537" modified="0"
+                        user="https://authority.hucompute.org/user/268560" reference="7520"/>
+    <type16:Fingerprint xmi:id="6434" sofa="7843" create="1611823420324" modified="0"
+                        user="https://authority.hucompute.org/user/268560" reference="7799"/>
+    <type16:Fingerprint xmi:id="6443" sofa="7843" create="1611823429522" modified="0"
+                        user="https://authority.hucompute.org/user/268560" reference="7542"/>
+    <isospace:SpatialEntity xmi:id="6452" sofa="7843" begin="0" end="0" comment="Living room" object_id="abstractarea"
+                            position="5647" rotation="5450" scale="5582" dcl="false" countable="false"
+                            cardinality="0.0"/>
+    <isospace:SpatialEntity xmi:id="6477" sofa="7843" begin="0" end="0" comment="outside room" object_id="abstractarea"
+                            position="5802" rotation="5552" scale="5772" dcl="false" countable="false"
+                            cardinality="0.0"/>
+    <isospace:SpatialEntity xmi:id="6502" sofa="7843" begin="0" end="0" object_id="Head" position="5817" rotation="5486"
+                            scale="5697" object_feature_array="7224 7228 7232 7236 7240" dcl="false" countable="false"
+                            cardinality="0.0"/>
+    <isospace:SpatialEntity xmi:id="6534" sofa="7843" begin="0" end="0" object_id="Face" position="5777" rotation="5522"
+                            scale="5837" object_feature_array="7244 7248 7252 7256" dcl="false" countable="false"
+                            cardinality="0.0"/>
+    <isospace:SpatialEntity xmi:id="6565" sofa="7843" begin="0" end="0" object_id="Arms" position="5592" rotation="5468"
+                            scale="5812" object_feature_array="7260 7264 7268 7272 7276" dcl="false" countable="false"
+                            cardinality="0.0"/>
+    <isospace:SpatialEntity xmi:id="6597" sofa="7843" begin="0" end="0" object_id="Legs" position="5752" rotation="5558"
+                            scale="5767" object_feature_array="7280 7284 7288" dcl="false" countable="false"
+                            cardinality="0.0"/>
+    <isospace:SpatialEntity xmi:id="6627" sofa="7843" begin="0" end="0" object_id="Mouth" position="5717"
+                            rotation="5540" scale="5602" object_feature_array="7292 7296 7300 7304 7308 7312 7316 7320"
+                            dcl="false" countable="false" cardinality="0.0"/>
+    <isospace:SpatialEntity xmi:id="6662" sofa="7843" begin="0" end="0" object_id="Nose" position="5742" rotation="5492"
+                            scale="5737" object_feature_array="7324 7328 7332 7336 7340 7344 7348" dcl="false"
+                            countable="false" cardinality="0.0"/>
+    <isospace:SpatialEntity xmi:id="6696" sofa="7843" begin="0" end="0" object_id="Ears" position="5827" rotation="5432"
+                            scale="5657" object_feature_array="7352 7356 7360" dcl="false" countable="false"
+                            cardinality="0.0"/>
+    <isospace:SpatialEntity xmi:id="6726" sofa="7843" begin="0" end="0" object_id="Eyes" position="5787" rotation="5426"
+                            scale="5687" object_feature_array="7364 7368 7372" dcl="false" countable="false"
+                            cardinality="0.0"/>
+    <isospace:SpatialEntity xmi:id="6756" sofa="7843" begin="0" end="0" object_id="Wardrobe" position="5797"
+                            rotation="5528" scale="5707"
+                            object_feature_array="7376 7380 7384 7388 7392 7396 7400 7404 7408" dcl="false"
+                            countable="false" cardinality="0.0"/>
+    <isospace:SpatialEntity xmi:id="6792" sofa="7843" begin="0" end="0" object_id="Torso" position="5832"
+                            rotation="5534" scale="5632" object_feature_array="7412 7416 7420 7424" dcl="false"
+                            countable="false" cardinality="0.0"/>
+    <isospace:SpatialEntity xmi:id="6823" sofa="7843" begin="0" end="0" comment="Me &amp; my cat"
+                            object_id="abstractpoint" position="5792" rotation="5564" scale="5682" dcl="false"
+                            countable="false" cardinality="0.0"/>
+    <isospace:SpatialEntity xmi:id="6848" sofa="7843" begin="0" end="0" comment="book"
+                            object_id="fb4f8c6863ded8305c6a44a505804654" position="5732" rotation="5462" scale="5807"
+                            dcl="false" countable="false" cardinality="0.0"/>
+    <isospace:SpatialEntity xmi:id="6873" sofa="7843" begin="0" end="0" object_id="9764146fdae97d0eaaf573fd4e7b2f39"
+                            position="5677" rotation="5516" scale="5637" dcl="false" countable="false"
+                            cardinality="0.0"/>
+    <isospace:SpatialEntity xmi:id="6898" sofa="7843" begin="0" end="0" object_id="37eab42757ae1545be36894b151eda76"
+                            position="5782" rotation="5480" scale="5822" dcl="false" countable="false"
+                            cardinality="0.0"/>
+    <isospace:SpatialEntity xmi:id="6923" sofa="7843" begin="10" end="12" object_id="Root" position="5597"
+                            rotation="5570" scale="5722"
+                            object_feature_array="7184 7188 7192 7196 7200 7204 7208 7212 7216 7220" dcl="false"
+                            countable="false" cardinality="0.0"/>
+    <isospace:SpatialEntity xmi:id="6960" sofa="7843" begin="20" end="23" object_id="f0b4f696e91f59af18b14db3b83de9ff"
+                            position="5692" rotation="5504" scale="5762" dcl="false" countable="false"
+                            cardinality="0.0"/>
+    <isospace:SpatialEntity xmi:id="6985" sofa="7843" begin="44" end="46" dcl="false" countable="false"
+                            cardinality="0.0"/>
+    <isospace:SpatialEntity xmi:id="7010" sofa="7843" begin="67" end="72" object_id="377fceb1500e6452d9651cd1d591d64d"
+                            position="5747" rotation="5456" scale="5662" dcl="false" countable="false"
+                            cardinality="0.0"/>
+    <isospace:SpatialEntity xmi:id="7035" sofa="7843" begin="77" end="78" dcl="false" countable="false"
+                            cardinality="0.0"/>
+    <isospace:SpatialEntity xmi:id="7060" sofa="7843" begin="98" end="103" dcl="false" countable="false"
+                            cardinality="0.0"/>
+    <isospace:SpatialEntity xmi:id="7085" sofa="7843" begin="161" end="166" object_id="35dc51b265375d8ec57264eb88d91b63"
+                            position="5667" rotation="5546" scale="5627" dcl="false" countable="false"
+                            cardinality="0.0"/>
+    <isospace:SpatialEntity xmi:id="7110" sofa="7843" begin="221" end="230" object_id="abstractvolume" position="5617"
+                            rotation="5510" scale="5607" dcl="false" countable="false" cardinality="0.0"/>
+    <isospace:QsLink xmi:id="7135" sofa="7843" comment="null" figure="5842" ground="6477" rel_type="IN"/>
+    <isospace:QsLink xmi:id="7142" sofa="7843" comment="null" figure="5842" ground="6452" rel_type="IN"/>
+    <isospace:QsLink xmi:id="7149" sofa="7843" comment="null" figure="7010" ground="6452" rel_type="IN"/>
+    <isospace:QsLink xmi:id="7156" sofa="7843" comment="null" figure="6923" ground="7010" rel_type="EC"/>
+    <isospace:QsLink xmi:id="7163" sofa="7843" comment="null" figure="6960" ground="7010" rel_type="EC"/>
+    <isospace:QsLink xmi:id="7170" sofa="7843" comment="null" figure="6873" ground="6452" rel_type="IN"/>
+    <isospace:QsLink xmi:id="7177" sofa="7843" comment="null" figure="6898" ground="6873" rel_type="EC"/>
+    <IsoSpatial:ObjectAttribute xmi:id="7184" sofa="7843" key="skinColor" value="#FFFFFF"/>
+    <IsoSpatial:ObjectAttribute xmi:id="7188" sofa="7843" key="model" value="HumanMaleDCS"/>
+    <IsoSpatial:ObjectAttribute xmi:id="7192" sofa="7843" key="height" value="0.5"/>
+    <IsoSpatial:ObjectAttribute xmi:id="7196" sofa="7843" key="lowerMuscle" value="0.5"/>
+    <IsoSpatial:ObjectAttribute xmi:id="7200" sofa="7843" key="lowerWeight" value="0.5"/>
+    <IsoSpatial:ObjectAttribute xmi:id="7204" sofa="7843" key="skinBlueness" value="0.5"/>
+    <IsoSpatial:ObjectAttribute xmi:id="7208" sofa="7843" key="skinGreenness" value="0.5"/>
+    <IsoSpatial:ObjectAttribute xmi:id="7212" sofa="7843" key="skinRedness" value="0.5"/>
+    <IsoSpatial:ObjectAttribute xmi:id="7216" sofa="7843" key="upperMuscle" value="0.5"/>
+    <IsoSpatial:ObjectAttribute xmi:id="7220" sofa="7843" key="upperWeight" value="0.5"/>
+    <IsoSpatial:ObjectAttribute xmi:id="7224" sofa="7843" key="foreheadPosition" value="0.5"/>
+    <IsoSpatial:ObjectAttribute xmi:id="7228" sofa="7843" key="foreheadSize" value="0.5"/>
+    <IsoSpatial:ObjectAttribute xmi:id="7232" sofa="7843" key="headSize" value="0.5"/>
+    <IsoSpatial:ObjectAttribute xmi:id="7236" sofa="7843" key="headWidth" value="0.5"/>
+    <IsoSpatial:ObjectAttribute xmi:id="7240" sofa="7843" key="neckThickness" value="0.5"/>
+    <IsoSpatial:ObjectAttribute xmi:id="7244" sofa="7843" key="cheekPosition" value="0.5"/>
+    <IsoSpatial:ObjectAttribute xmi:id="7248" sofa="7843" key="cheekSize" value="0.5"/>
+    <IsoSpatial:ObjectAttribute xmi:id="7252" sofa="7843" key="lowCheekPosition" value="0.5"/>
+    <IsoSpatial:ObjectAttribute xmi:id="7256" sofa="7843" key="lowCheekPronounced" value="0.5"/>
+    <IsoSpatial:ObjectAttribute xmi:id="7260" sofa="7843" key="armLength" value="0.5"/>
+    <IsoSpatial:ObjectAttribute xmi:id="7264" sofa="7843" key="armWidth" value="0.5"/>
+    <IsoSpatial:ObjectAttribute xmi:id="7268" sofa="7843" key="forearmLength" value="0.5"/>
+    <IsoSpatial:ObjectAttribute xmi:id="7272" sofa="7843" key="forearmWidth" value="0.5"/>
+    <IsoSpatial:ObjectAttribute xmi:id="7276" sofa="7843" key="handsSize" value="0.5"/>
+    <IsoSpatial:ObjectAttribute xmi:id="7280" sofa="7843" key="feetSize" value="0.5"/>
+    <IsoSpatial:ObjectAttribute xmi:id="7284" sofa="7843" key="legSeparation" value="0.5"/>
+    <IsoSpatial:ObjectAttribute xmi:id="7288" sofa="7843" key="legsSize" value="0.5"/>
+    <IsoSpatial:ObjectAttribute xmi:id="7292" sofa="7843" key="chinPosition" value="0.5"/>
+    <IsoSpatial:ObjectAttribute xmi:id="7296" sofa="7843" key="chinPronounced" value="0.5"/>
+    <IsoSpatial:ObjectAttribute xmi:id="7300" sofa="7843" key="chinSize" value="0.5"/>
+    <IsoSpatial:ObjectAttribute xmi:id="7304" sofa="7843" key="jawsPosition" value="0.5"/>
+    <IsoSpatial:ObjectAttribute xmi:id="7308" sofa="7843" key="jawsSize" value="0.5"/>
+    <IsoSpatial:ObjectAttribute xmi:id="7312" sofa="7843" key="lipsSize" value="0.5"/>
+    <IsoSpatial:ObjectAttribute xmi:id="7316" sofa="7843" key="mandibleSize" value="0.5"/>
+    <IsoSpatial:ObjectAttribute xmi:id="7320" sofa="7843" key="mouthSize" value="0.5"/>
+    <IsoSpatial:ObjectAttribute xmi:id="7324" sofa="7843" key="noseCurve" value="0.5"/>
+    <IsoSpatial:ObjectAttribute xmi:id="7328" sofa="7843" key="noseFlatten" value="0.5"/>
+    <IsoSpatial:ObjectAttribute xmi:id="7332" sofa="7843" key="noseInclination" value="0.5"/>
+    <IsoSpatial:ObjectAttribute xmi:id="7336" sofa="7843" key="nosePosition" value="0.5"/>
+    <IsoSpatial:ObjectAttribute xmi:id="7340" sofa="7843" key="nosePronounced" value="0.5"/>
+    <IsoSpatial:ObjectAttribute xmi:id="7344" sofa="7843" key="noseSize" value="0.5"/>
+    <IsoSpatial:ObjectAttribute xmi:id="7348" sofa="7843" key="noseWidth" value="0.5"/>
+    <IsoSpatial:ObjectAttribute xmi:id="7352" sofa="7843" key="earsPosition" value="0.5"/>
+    <IsoSpatial:ObjectAttribute xmi:id="7356" sofa="7843" key="earsRotation" value="0.5"/>
+    <IsoSpatial:ObjectAttribute xmi:id="7360" sofa="7843" key="earsSize" value="0.5"/>
+    <IsoSpatial:ObjectAttribute xmi:id="7364" sofa="7843" key="eyeRotation" value="0.5"/>
+    <IsoSpatial:ObjectAttribute xmi:id="7368" sofa="7843" key="eyeSpacing" value="0.5"/>
+    <IsoSpatial:ObjectAttribute xmi:id="7372" sofa="7843" key="eyeSize" value="0.5"/>
+    <IsoSpatial:ObjectAttribute xmi:id="7376" sofa="7843" key="Hair" value="None"/>
+    <IsoSpatial:ObjectAttribute xmi:id="7380" sofa="7843" key="Chest" value="MaleShirt2"/>
+    <IsoSpatial:ObjectAttribute xmi:id="7384" sofa="7843" key="Legs" value="MaleShorts1"/>
+    <IsoSpatial:ObjectAttribute xmi:id="7388" sofa="7843" key="Underwear" value="None"/>
+    <IsoSpatial:ObjectAttribute xmi:id="7392" sofa="7843" key="Beard" value="None"/>
+    <IsoSpatial:ObjectAttribute xmi:id="7396" sofa="7843" key="Eyebrow" value="None"/>
+    <IsoSpatial:ObjectAttribute xmi:id="7400" sofa="7843" key="Eyes" value="None"/>
+    <IsoSpatial:ObjectAttribute xmi:id="7404" sofa="7843" key="Face" value="None"/>
+    <IsoSpatial:ObjectAttribute xmi:id="7408" sofa="7843" key="Hands" value="None"/>
+    <IsoSpatial:ObjectAttribute xmi:id="7412" sofa="7843" key="belly" value="0.5"/>
+    <IsoSpatial:ObjectAttribute xmi:id="7416" sofa="7843" key="breastSize" value="0.5"/>
+    <IsoSpatial:ObjectAttribute xmi:id="7420" sofa="7843" key="gluteusSize" value="0.5"/>
+    <IsoSpatial:ObjectAttribute xmi:id="7424" sofa="7843" key="waist" value="0.5"/>
+    <meta:MetaLink xmi:id="7428" sofa="7843" comment="null" figure="6502" ground="6923" rel_type="SUBCOREFENCE"/>
+    <meta:MetaLink xmi:id="7435" sofa="7843" comment="null" figure="6792" ground="6923" rel_type="SUBCOREFENCE"/>
+    <meta:MetaLink xmi:id="7442" sofa="7843" comment="null" figure="6597" ground="6923" rel_type="SUBCOREFENCE"/>
+    <meta:MetaLink xmi:id="7449" sofa="7843" comment="null" figure="6756" ground="6923" rel_type="SUBCOREFENCE"/>
+    <meta:MetaLink xmi:id="7456" sofa="7843" comment="null" figure="6696" ground="6502" rel_type="SUBCOREFENCE"/>
+    <meta:MetaLink xmi:id="7463" sofa="7843" comment="null" figure="6534" ground="6502" rel_type="SUBCOREFENCE"/>
+    <meta:MetaLink xmi:id="7470" sofa="7843" comment="null" figure="6565" ground="6792" rel_type="SUBCOREFENCE"/>
+    <meta:MetaLink xmi:id="7477" sofa="7843" comment="null" figure="6726" ground="6534" rel_type="SUBCOREFENCE"/>
+    <meta:MetaLink xmi:id="7484" sofa="7843" comment="null" figure="6662" ground="6534" rel_type="SUBCOREFENCE"/>
+    <meta:MetaLink xmi:id="7491" sofa="7843" comment="null" figure="6627" ground="6534" rel_type="SUBCOREFENCE"/>
+    <isospace:OLink xmi:id="7498" sofa="7843" comment="null" figure="6923" ground="7010" rel_type="On"
+                    projective="false"/>
+    <isospace:OLink xmi:id="7509" sofa="7843" comment="null" figure="6960" ground="7010" rel_type="On"
+                    projective="false"/>
+    <isospace:OLink xmi:id="7520" sofa="7843" comment="null" figure="6873" ground="7010" rel_type="In Front of"
+                    projective="false"/>
+    <isospace:OLink xmi:id="7531" sofa="7843" comment="null" figure="6898" ground="6873" rel_type="On"
+                    projective="false"/>
+    <isospace:OLink xmi:id="7542" sofa="7843" comment="null" figure="7686" ground="7110" rel_type="In Front of"
+                    projective="false"/>
+    <isospace:SRelation xmi:id="7553" sofa="7843" begin="35" end="37" relation_type="directional" cluster="null"
+                        value="directional"/>
+    <isospace:SRelation xmi:id="7568" sofa="7843" begin="51" end="59" relation_type="directional" cluster="null"
+                        value="directional"/>
+    <isospace:SRelation xmi:id="7583" sofa="7843" begin="60" end="62" relation_type="topoDirectional" cluster="null"
+                        value="topoDirectional"/>
+    <isospace:SRelation xmi:id="7598" sofa="7843" begin="182" end="186" relation_type="pathDefining" cluster="null"
+                        value="pathDefining"/>
+    <isospace:SRelation xmi:id="7613" sofa="7843" begin="214" end="216" relation_type="topoDirectional" cluster="null"
+                        value="topoDirectional"/>
+    <isospace:NonMotionEvent xmi:id="7628" sofa="7843" begin="47" end="50" countable="false"/>
+    <isospace:NonMotionEvent xmi:id="7657" sofa="7843" begin="79" end="83" countable="false"/>
+    <isospace:NonMotionEvent xmi:id="7686" sofa="7843" begin="209" end="213" object_id="abstractcylinder"
+                             position="5727" rotation="5438" scale="5702" countable="false"/>
+    <isospace:Measure xmi:id="7715" sofa="7843" begin="118" end="120" value="null" unit="null"/>
+    <isospace:Motion xmi:id="7729" sofa="7843" begin="167" end="181" countable="false"/>
+    <isospace:EventPath xmi:id="7763" sofa="7843" begin="0" end="0" object_id="abstractvolume" position="5757"
+                        rotation="5576" scale="5652" dcl="false" countable="false" cardinality="0.0" startID="6477"
+                        midID_array="6452" endID="7110"/>
+    <semafsr:SrLink xmi:id="7799" sofa="7843" comment="null" figure="7085" ground="7686" rel_type="Arg0"/>
+    <tcas:DocumentAnnotation xmi:id="7806" sofa="7850" begin="0" end="231" language="x-unspecified"/>
+    <iaa:AgreementContainer xmi:id="7857" sofa="7850" begin="0" end="0" overallAgreementValue="NaN"
+                            agreementMeasure="KrippendorffAlphaAgreement" categoryNames="" categoryAgreementValues=""
+                            categoryCounts=""/>
+    <cas:Sofa xmi:id="7829" sofaNum="1" sofaID="_InitialView" mimeType="text"
+              sofaString="Yesterday me and my cat were alone at home. We lay together on the couch and I read. But since my couch is only about 2m long, it was pretty cramped. Suddenly a mouse came scurrying into the room and began to gnaw on the couch leg."/>
+    <cas:Sofa xmi:id="7836" sofaNum="2" sofaID="https://authority.hucompute.org/user/306211" mimeType="text"
+              sofaString="Yesterday me and my cat were alone at home. We lay together on the couch and I read. But since my couch is only about 2m long, it was pretty cramped. Suddenly a mouse came scurrying into the room and began to gnaw on the couch leg."/>
+    <cas:Sofa xmi:id="7843" sofaNum="3" sofaID="https://authority.hucompute.org/user/268560" mimeType="text"
+              sofaString="Yesterday me and my cat were alone at home. We lay together on the couch and I read. But since my couch is only about 2m long, it was pretty cramped. Suddenly a mouse came scurrying into the room and began to gnaw on the couch leg."/>
+    <cas:Sofa xmi:id="7850" sofaNum="4" sofaID="IAA" mimeType="text"
+              sofaString="Yesterday me and my cat were alone at home. We lay together on the couch and I read. But since my couch is only about 2m long, it was pretty cramped. Suddenly a mouse came scurrying into the room and began to gnaw on the couch leg."/>
+    <cas:View sofa="7829"
+              members="1 6 19 32 45 58 71 84 97 110 123 136 149 162 175 188 201 214 227 240 253 266 279 292 305 318 331 344 357 370 383 396 409 422 435 448 461 474 487 500 513 526 539 552 565 578 591 604 617 630 643 656 669 682 687 692 697"/>
+    <cas:View sofa="7836"
+              members="702 707 712 717 722 727 740 753 766 779 792 805 818 831 844 857 870 883 896 909 922 935 948 961 974 987 1000 1013 1026 1039 1052 1065 1078 1091 1104 1117 1130 1143 1156 1169 1182 1195 1208 1221 1234 1247 1260 1273 1286 1299 1312 1325 1338 1351 1364 1377 1390 1403 1415 1427 1439 1451 1463 1475 1487 1499 1511 1523 1535 1547 1559 1571 1583 1595 1607 1619 1631 1643 1655 1667 1679 1691 1703 1715 1727 1739 1751 1763 1775 1787 1799 1811 1823 1835 1847 1859 1871 1883 1895 1907 1919 1931 1943 1955 1967 1979 1991 2003 2015 2027 2043 2059 2084 2109 2141 2172 2204 2234 2269 2303 2333 2363 2399 2430 2455 2480 2517 2542 2567 2592 2617 2642 2667 2692 2717 2726 2735 2744 2753 2762 2771 2780 2789 2798 2807 2816 2825 2834 2843 2852 2861 2870 2879 2888 2897 2906 2915 2924 2933 2942 2951 2960 2969 2978 2987 2996 3005 3014 3023 3032 3041 3050 3059 3068 3077 3086 3095 3104 3113 3122 3131 3140 3149 3164 3179 3208 3237 3251 3285 3291 3297 3303 3309 3315 3321 3327 3333 3339 3345 3351 3357 3363 3369 3375 3381 3387 3393 3399 3405 3411 3417 3423 3429 3434 3439 3444 3449 3454 3459 3464 3469 3474 3479 3484 3489 3494 3499 3504 3509 3514 3519 3524 3529 3534 3539 3544 3549 3554 3559 3564 3569 3574 3579 3584 3589 3594 3599 3604 3609 3614 3619 3624 3629 3634 3639 3644 3649 3654 3659 3664 3669 3673 3677 3681 3685 3689 3693 3697 3701 3705 3709 3713 3717 3721 3725 3729 3733 3737 3741 3745 3749 3753 3757 3761 3765 3769 3773 3777 3781 3785 3789 3793 3797 3801 3805 3809 3813 3817 3821 3825 3829 3833 3837 3841 3845 3849 3853 3857 3861 3865 3869 3873 3877 3881 3885 3889 3893 3897 3901 3905 3909 3913 3920 3927 3934 3941 3948 3955 3962 3969 3976 3983 3994 4005 4012 4019 4026 4033"/>
+    <cas:View sofa="7843"
+              members="4069 4074 4079 4084 4089 4094 4107 4120 4133 4146 4159 4172 4185 4198 4211 4224 4237 4250 4263 4276 4289 4302 4315 4328 4341 4354 4367 4380 4393 4406 4419 4432 4445 4458 4471 4484 4497 4510 4523 4536 4549 4562 4575 4588 4601 4614 4627 4640 4653 4666 4679 4692 4705 4718 4731 4744 4757 4770 4782 4794 4806 4818 4830 4842 4854 4866 4878 4890 4902 4914 4926 4938 4950 4962 4974 4986 4998 5010 5022 5034 5046 5058 5070 5082 5094 5106 5118 5130 5142 5154 5166 5178 5190 5202 5214 5226 5238 5250 5262 5274 5286 5298 5310 5322 5334 5346 5358 5370 5382 5394 5410 5426 5432 5438 5444 5450 5456 5462 5468 5474 5480 5486 5492 5498 5504 5510 5516 5522 5528 5534 5540 5546 5552 5558 5564 5570 5576 5582 5587 5592 5597 5602 5607 5612 5617 5622 5627 5632 5637 5642 5647 5652 5657 5662 5667 5672 5677 5682 5687 5692 5697 5702 5707 5712 5717 5722 5727 5732 5737 5742 5747 5752 5757 5762 5767 5772 5777 5782 5787 5792 5797 5802 5807 5812 5817 5822 5827 5832 5837 5842 5868 5894 5903 5912 5921 5930 5939 5948 5957 5966 5975 5984 5993 6002 6011 6020 6029 6038 6047 6056 6065 6074 6083 6092 6101 6110 6119 6128 6137 6146 6155 6164 6173 6182 6191 6200 6209 6218 6227 6236 6245 6254 6263 6272 6281 6290 6299 6308 6317 6326 6335 6344 6353 6362 6371 6380 6389 6398 6407 6416 6425 6434 6443 6452 6477 6502 6534 6565 6597 6627 6662 6696 6726 6756 6792 6823 6848 6873 6898 6923 6960 6985 7010 7035 7060 7085 7110 7135 7142 7149 7156 7163 7170 7177 7184 7188 7192 7196 7200 7204 7208 7212 7216 7220 7224 7228 7232 7236 7240 7244 7248 7252 7256 7260 7264 7268 7272 7276 7280 7284 7288 7292 7296 7300 7304 7308 7312 7316 7320 7324 7328 7332 7336 7340 7344 7348 7352 7356 7360 7364 7368 7372 7376 7380 7384 7388 7392 7396 7400 7404 7408 7412 7416 7420 7424 7428 7435 7442 7449 7456 7463 7470 7477 7484 7491 7498 7509 7520 7531 7542 7553 7568 7583 7598 7613 7628 7657 7686 7715 7729 7763 7799"/>
+    <cas:View sofa="7850" members="7806 7857"/>
+</xmi:XMI>
