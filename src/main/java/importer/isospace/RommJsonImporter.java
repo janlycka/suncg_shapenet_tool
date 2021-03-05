@@ -22,12 +22,8 @@ import org.xml.sax.SAXException;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.util.Arrays;
-import java.util.HashMap;
+import java.io.*;
+import java.util.*;
 import java.lang.Math;
 
 ;
@@ -90,9 +86,18 @@ public class RommJsonImporter extends JCasResourceCollectionReader_ImplBase {
     }
 
     HashMap<String, Object> idMap;
+    Map<String, Set<String>> idMap_SUNCG = null;
+    Map<String, Set<String>> idMap_ShapeNet = null;
 
     private void convert(JCas aJCas, InputStream aReader, boolean links) throws IOException, SAXException
     {
+        if (idMap_SUNCG == null) {
+            idMap_SUNCG = IdSUNCG();
+        }
+        if (idMap_ShapeNet == null) {
+            idMap_ShapeNet = IdShapeNet();
+        }
+
         System.out.println("xxx");
         System.out.println(aReader);
 
@@ -127,6 +132,10 @@ public class RommJsonImporter extends JCasResourceCollectionReader_ImplBase {
                     System.out.println("node");
                     System.out.println(node);
                     String objID = node.getString("modelId");
+
+                    //modelId is in SUNCG-Format -> get object description -> search ShapeNet DB for matching objects
+                    objID = obtainShapeNetModelIdForSUNCGModelID(objID);
+
                     JSONArray transform = node.getJSONArray("transform");
 
                     // id
@@ -134,7 +143,12 @@ public class RommJsonImporter extends JCasResourceCollectionReader_ImplBase {
                     SpatialEntity entity = new SpatialEntity(aJCas);
                     entity.setObject_id(objID);
 
-                    //4x4 Transformation-matrix
+                    // 4x4 Transformation-matrix (parat in SUNCG-JSON Datei)
+                    // a b c d
+                    // e f g h
+                    // i j k l
+                    // m n o p
+
                     // https://math.stackexchange.com/questions/237369/given-this-transformation-matrix-how-do-i-decompose-it-into-translation-rotati
                     double a = transform.getDouble(0);
                     double b = transform.getDouble(1);
@@ -156,8 +170,8 @@ public class RommJsonImporter extends JCasResourceCollectionReader_ImplBase {
                     // pos
                     Vec3 pos = new Vec3(aJCas);
                     pos.setX(m);
-                    pos.setY(n);
-                    pos.setZ(o);
+                    pos.setY(o);
+                    pos.setZ(n);
                     entity.setPosition(pos);
 
                     // scale
@@ -225,8 +239,142 @@ public class RommJsonImporter extends JCasResourceCollectionReader_ImplBase {
 
     }
 
+    public String obtainShapeNetModelIdForSUNCGModelID(String suncgId) {
+        System.out.println("looking up names for suncgID " + suncgId);
+        Set<String> descriptions = idMap_SUNCG.get(suncgId);
+        System.out.println("got description " + descriptions);
+
+        for (String description: descriptions){
+            for (String key: idMap_ShapeNet.keySet()) {
+                Set<String> tags = idMap_ShapeNet.get(key);
+                if (tags.contains(description)) {
+                    return key;
+                    //break;
+                }
+            }
+        }
+        System.out.println("NOT FOUND");
+        //System.out.println("IdShapeNet " + idMap_ShapeNet);
+
+        return "00000";
+    }
 
 
-       
+    //Dayana
+    private static Map IdSUNCG() throws FileNotFoundException {
+        // Creating a dictionary: key=Id, value=wnlemmas
+        Map<String, Set<String>> map = new HashMap<String, Set<String>>();
+        //Get scanner instance
+        Scanner scanner = new Scanner(new File(System.getProperty("user.dir") + "/resources/spaceeval/XML/ModelCategoryMapping.v2.csv"));
+        //Set the delimiter to split objects
+        scanner.useDelimiter("\n");
+        while (scanner.hasNext()) {
+            String data = scanner.next();
+            //for each object split arguments-string into an array using comma
+            //ignore the commas within quotes
+            String[] elem = data.split(",");
+            //add words in the dictionary
+            //map.put(elem[1], elem[2].replaceAll("_", " "));
+
+
+            String res = "";
+
+            if (elem[2].replace("\"", "").length() != 0) {
+                res += elem[2]+",";
+            }
+            if (elem[3].replace("\"", "").length() != 0) {
+                res += elem[3]+",";
+            }
+            if (elem[5].replace("\"", "").length() != 0) {
+                res += elem[5]+",";
+            }
+            if (elem[7].replace("\"", "").length() != 0) {
+                if(elem[7].split(".").length > 0){
+                    res += elem[7].split(".")[0];
+                }
+            }
+            res = res.replace("_", " ").replace("\"", "").replace("[", "").replace("]", "").toLowerCase();
+            List<String> resArray = Arrays.asList(res.split(","));
+
+            Set<String> resSet = new HashSet<String>(resArray);
+
+            map.put(elem[1], resSet);
+
+        }
+        //Do not forget to close the scanner
+        scanner.close();
+        return map;
+    }
+
+
+    //Dayana
+    private static Map IdShapeNet() throws FileNotFoundException {
+        // Creating a dictionary: key=Id, value=wnlemmas
+        Map<String, Set<String>> map = new HashMap<String, Set<String>>();
+
+        //Get scanner instance
+        Scanner scanner = new Scanner(new File(System.getProperty("user.dir") + "/resources/spaceeval/XML/metadata_filter.csv"));
+        //Set the delimiter to split objects
+        scanner.useDelimiter("wss.");
+        while (scanner.hasNext()) {
+            String data = scanner.next();
+            //for each object split arguments-string into an array using comma
+            //ignore the commas within quotes
+            String[] elem = data.split(",(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)");
+            //add words in the dictionary
+            String res = "";
+
+            if (elem[1].replace("\"", "").length() != 0) {
+                res += elem[1]+",";
+            }
+            if (elem[3].replace("\"", "").length() != 0) {
+                res += elem[3]+",";
+            }
+            if (elem[14].replace("\"", "").length() != 0) {
+                res += elem[14]+",";
+            }
+            if (elem[15].replace("\"", "").length() != 0) {
+                res += elem[15];
+            }
+            res = res.replace("\"", "").replace("[", "").replace("]", "").toLowerCase();
+
+            List<String> resArray = Arrays.asList(res.split(","));
+            Set<String> resSet = new HashSet<String>(resArray);
+
+            map.put(elem[0], resSet);
+            //System.out.println(elem[0] + "\n " + map.get(elem[0]));
+        }
+        //Do not forget to close the scanner
+        scanner.close();
+/*
+        // if we make a search
+        File jsonInputFile = new File(System.getProperty("user.dir") + "/resources/spaceeval/XML/search.json");
+        InputStream is;
+        try {
+            is = new FileInputStream(jsonInputFile);
+            // Create JsonReader from Json.
+            JsonReader reader = Json.createReader(is);
+            // Get the JsonObject structure from JsonReader.
+            JsonObject empObj = reader.readObject();
+            reader.close();
+            // read json array
+            JsonArray arrObj = empObj.getJsonArray("results");
+            for (int i = 0; i < arrObj.size(); i++) {
+                JsonObject jsonObject1 = arrObj.getJsonObject(i);
+                String ind = jsonObject1.getString("id");
+                if (map.get(ind) == null) {
+                    String wnlemmas = jsonObject1.getJsonArray("wnlemmas").toString().replace("\"", "").replace("[", "").replace("]", "").toLowerCase();
+                    if (wnlemmas.length() == 0) {
+                        map.put(ind, jsonObject1.getJsonArray("categories").toString().replace("\"", "").replace("[", "").replace("]", "").toLowerCase());
+                    } else {
+                        map.put(ind, wnlemmas);
+                    }
+                }
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }*/
+        return map;
+    }
 
 }
