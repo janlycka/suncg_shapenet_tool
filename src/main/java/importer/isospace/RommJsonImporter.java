@@ -23,8 +23,10 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.*;
+import java.rmi.server.ObjID;
 import java.util.*;
 import java.lang.Math;
+import java.util.concurrent.ThreadLocalRandom;
 
 ;
 
@@ -71,7 +73,7 @@ public class RommJsonImporter extends JCasResourceCollectionReader_ImplBase {
 
         idMap = new HashMap<>();
         try {
-            convert(aJCas, reader, false);
+            //convert(aJCas, reader, false);
 
             reader = CompressionUtils.getInputStream(res.getLocation(), res.getInputStream());
 			convert(aJCas, reader, true);
@@ -85,9 +87,12 @@ public class RommJsonImporter extends JCasResourceCollectionReader_ImplBase {
     	//System.out.println(XmlFormatter.getPrettyString(aJCas.getCas()));
     }
 
+    //potential wall
+    //36b2472a8f979c7298f210d66638d842
+
     HashMap<String, Object> idMap;
-    Map<String, Set<String>> idMap_SUNCG = null;
-    Map<String, Set<String>> idMap_ShapeNet = null;
+    Map<String, List<List<String>>> idMap_SUNCG = null;
+    Map<String, List<List<String>>> idMap_ShapeNet = null;
 
     private void convert(JCas aJCas, InputStream aReader, boolean links) throws IOException, SAXException
     {
@@ -123,18 +128,23 @@ public class RommJsonImporter extends JCasResourceCollectionReader_ImplBase {
         {
             JSONObject level = levels.getJSONObject(ind_levels);
             JSONArray nodes = level.getJSONArray("nodes");
+            JSONArray min = new JSONArray(3);
+
             for (int ind_nodes = 0; ind_nodes < nodes.length(); ind_nodes++)
             {
                 JSONObject node = nodes.getJSONObject(ind_nodes);
                 String nodeType = node.getString("type");
-
-                if (nodeType.equals("Object")) {
+                if (nodeType.equals("Room")) {
+                    JSONObject bbox = node.getJSONObject("bbox");
+                    min = bbox.getJSONArray("min");
+                }
+                else if (nodeType.equals("Object")) {
                     System.out.println("node");
                     System.out.println(node);
-                    String objID = node.getString("modelId");
+                    String objIDSunCG = node.getString("modelId");
 
                     //modelId is in SUNCG-Format -> get object description -> search ShapeNet DB for matching objects
-                    objID = obtainShapeNetModelIdForSUNCGModelID(objID);
+                    String objID = obtainShapeNetModelIdForSUNCGModelID(objIDSunCG);
 
                     JSONArray transform = node.getJSONArray("transform");
 
@@ -162,51 +172,95 @@ public class RommJsonImporter extends JCasResourceCollectionReader_ImplBase {
                     double j = transform.getDouble(9);
                     double k = transform.getDouble(10);
                     double l = transform.getDouble(11);
-                    double m = transform.getDouble(12);
-                    double n = transform.getDouble(13);
-                    double o = transform.getDouble(14);
+                    double m = transform.getDouble(12) - min.getDouble(0);
+                    double n = transform.getDouble(13) - min.getDouble(1);
+                    double o = transform.getDouble(14) - min.getDouble(2);
                     double p = transform.getDouble(15);
 
+                    int val = 100 + 60;
                     // pos
                     Vec3 pos = new Vec3(aJCas);
-                    pos.setX(m);
-                    pos.setY(o);
-                    pos.setZ(n);
+                    pos.setX(m*val); // m to cm conversion
+                    pos.setY(n*val);
+                    pos.setZ(o*val);
                     entity.setPosition(pos);
+
+                    System.out.println(m+" "+o+" "+n);
 
                     // scale
                     double sa = Math.sqrt(Math.pow(a,2) + Math.pow(e,2) + Math.pow(i,2));
                     double sb = Math.sqrt(Math.pow(b,2) + Math.pow(f,2) + Math.pow(j,2));
                     double sc = Math.sqrt(Math.pow(c,2) + Math.pow(g,2) + Math.pow(k,2));
-                    Vec3 scale = new Vec3(aJCas);
+                    Vec3 scale = new Vec3(aJCas);/*
                     scale.setX(sa);
-                    scale.setX(sb);
-                    scale.setX(sc);
+                    scale.setY(sb);
+                    scale.setZ(sc);*/
+                    scale.setX(100);
+                    scale.setY(100);
+                    scale.setZ(100);
                     entity.setScale(scale);
 
                     // rot
                     double ra = Math.acos(a/sa);
+                    System.out.println("rot: " + ra);
                     double rb = 0;//Math.acos(b/sb);
                     double rc = 0;//Math.acos(c/sc);
 
                     double [] euler = {ra, rb, rc};
 
-                    double yaw=euler[0]/16*(Math.PI/180);
-                    double roll=euler[1]/16*(Math.PI/180);
-                    double pitch=euler[2]/16*(Math.PI/180);
+
+                    double yaw=euler[0];//*/16(Math.PI/180);
+                    double roll=euler[1];//*/16;//*(Math.PI/180);
+                    double pitch=euler[2];//*/16;//*(Math.PI/180);
+
+                    double rollOver2 = roll * 0.5f;
+                    double sinRollOver2 = (double)Math.sin ((double)rollOver2);
+                    double cosRollOver2 = (double)Math.cos ((double)rollOver2);
+                    double pitchOver2 = pitch * 0.5f;
+                    double sinPitchOver2 = (double)Math.sin ((double)pitchOver2);
+                    double cosPitchOver2 = (double)Math.cos ((double)pitchOver2);
+                    double yawOver2 = yaw * 0.5f;
+                    double sinYawOver2 = (double)Math.sin ((double)yawOver2);
+                    double cosYawOver2 = (double)Math.cos ((double)yawOver2);
+
+                    double qw = cosYawOver2 * cosPitchOver2 * cosRollOver2 + sinYawOver2 * sinPitchOver2 * sinRollOver2;
+                    double qx = cosYawOver2 * sinPitchOver2 * cosRollOver2 + sinYawOver2 * cosPitchOver2 * sinRollOver2;
+                    double qy = sinYawOver2 * cosPitchOver2 * cosRollOver2 - cosYawOver2 * sinPitchOver2 * sinRollOver2;
+                    double qz = cosYawOver2 * cosPitchOver2 * sinRollOver2 - sinYawOver2 * sinPitchOver2 * cosRollOver2;
+                    /*
+                    double yaw=euler[0];// 16(Math.PI/180);
+                    double roll=euler[1];///16;//*(Math.PI/180);
+                    double pitch=euler[2];///16;//*(Math.PI/180);
                     double t0 = Math.cos(yaw * 0.5);
                     double t1 = Math.sin(yaw * 0.5);
-                    double t2 = Math.cos(roll * 0.5);
+                    double t2 = Math.cos(roll * 0.5); // 1
                     double t3 = Math.sin(roll * 0.5);
-                    double t4 = Math.cos(pitch * 0.5);
+                    double t4 = Math.cos(pitch * 0.5); // 1
                     double t5 = Math.sin(pitch * 0.5);
-                    double [] quaternion = {t0 * t2 * t5 + t1 * t3 * t4,-(t0 * t2 * t4 + t1 * t3 * t5),-(t0 * t3 * t4 - t1 * t2 * t5),-(t1 * t2 * t4 - t0 * t3 * t5)};
+                    double [] quaternion = {t0 * t2 * t5 + t1 * t3 * t4,-(t0 * t2 * t4 + t1 * t3 * t5),-(t0 * t3 * t4 - t1 * t2 * t5),-(t1 * t2 * t4 - t0 * t3 * t5)};*/
+                    //double [] quaternion = {0,0.92388,0,-0.38268};
+
+                    System.out.println("objIDobjID "+objIDSunCG);
+                    switch (objIDSunCG) {
+                        case "s__881":
+                        case "s__783":
+                            //suncg bed is opposite its shapenet counterparts
+                            euler[0] += Math.PI;
+                            System.out.println("adjusting bed rotation by force");
+                        default:
+                    }
+                    double [] quaternion = {0,Math.cos(0.5*euler[0]),0,-Math.sin(0.5*euler[0])};
+                    //double [] quaternion = {0,t0 * t2,0,t0 * t2};
 
                     Vec4 rot = new Vec4(aJCas);
                     rot.setX(quaternion[0]);
                     rot.setY(quaternion[1]);
                     rot.setZ(quaternion[2]);
                     rot.setW(quaternion[3]);
+                    /*rot.setX(qx);
+                    rot.setY(qy);
+                    rot.setZ(qz);
+                    rot.setW(qw);*/
                     entity.setRotation(rot);
 
                     // elevation
@@ -241,18 +295,108 @@ public class RommJsonImporter extends JCasResourceCollectionReader_ImplBase {
 
     public String obtainShapeNetModelIdForSUNCGModelID(String suncgId) {
         System.out.println("looking up names for suncgID " + suncgId);
-        Set<String> descriptions = idMap_SUNCG.get(suncgId);
-        System.out.println("got description " + descriptions);
+        List<List<String>> descriptionRanks = idMap_SUNCG.get(suncgId);
+        // { {}, {}, {}, {} }
+        System.out.println("got description " + descriptionRanks);
 
-        for (String description: descriptions){
-            for (String key: idMap_ShapeNet.keySet()) {
-                Set<String> tags = idMap_ShapeNet.get(key);
-                if (tags.contains(description)) {
-                    return key;
-                    //break;
+        List<Set> matches = new ArrayList<>();
+        for (int i=0; i<4; i++) {
+            Set<String> match = new HashSet<>();
+            matches.add(match);
+        }
+
+        //look for a very good fit
+        for (int a=0; a<2; a++) {
+            List<String> suncgRankWords = descriptionRanks.get(a);
+            for (String suncgWord: suncgRankWords){
+                if(suncgWord.equals("")) {
+                    continue;
+                }
+                // now loop throught all shapenet Data
+                for (String shapenetKey : idMap_ShapeNet.keySet()) {
+                    List<List<String>> shapenetRanks = idMap_ShapeNet.get(shapenetKey);
+                    //only now have we selected a shapenet object
+                    for (int b=0; b<2; b++) {
+                        //select words of a specific rank
+                        List<String> shapenetRankWords = shapenetRanks.get(b);
+
+                        if(shapenetRankWords.contains(suncgWord)){
+                            if (a==0 && b==0) {
+                                matches.get(0).add(shapenetKey);
+                            } else {
+                                matches.get(1).add(shapenetKey);
+                            }
+                        }
+                    }
                 }
             }
         }
+
+        if(!matches.get(0).isEmpty()) {
+            System.out.println("GOOD MATCH:" + matches.get(0));
+            int ln = matches.get(0).size();
+            int ind = ThreadLocalRandom.current().nextInt(0, ln);
+            //getList
+            List<String> finalRes = new ArrayList<String>();
+            finalRes.addAll(matches.get(0));
+            return finalRes.get(ind);
+        }
+
+        if(!matches.get(1).isEmpty()) {
+            System.out.println("FAIR MATCH:" + matches.get(1));
+            int ln = matches.get(1).size();
+            int ind = ThreadLocalRandom.current().nextInt(0, ln);
+            //getList
+            List<String> finalRes = new ArrayList<String>();
+            finalRes.addAll(matches.get(1));
+            return finalRes.get(ind);
+        }
+
+        //chuck it, just return anything remotely similar
+        for (int a=0; a<4; a++) {
+            List<String> suncgRankWords = descriptionRanks.get(a);
+            for (String suncgWord: suncgRankWords){
+                if(suncgWord.equals("")) {
+                    continue;
+                }
+                // now loop throught all shapenet Data
+                for (String shapenetKey : idMap_ShapeNet.keySet()) {
+                    List<List<String>> shapenetRanks = idMap_ShapeNet.get(shapenetKey);
+                    //only now have we selected a shapenet object
+                    for (int b=0; b<4; b++) {
+                        //select words of a specific rank
+                        List<String> shapenetRankWords = shapenetRanks.get(b);
+
+                        if(shapenetRankWords.contains(suncgWord)){
+                            matches.get(2).add(shapenetKey);
+                        }
+                    }
+                }
+            }
+        }
+
+        if(!matches.get(2).isEmpty()) {
+            System.out.println("POOR MATCH:" + matches.get(2));
+            int ln = matches.get(2).size();
+            int ind = ThreadLocalRandom.current().nextInt(0, ln);
+            //getList
+            List<String> finalRes = new ArrayList<String>();
+            finalRes.addAll(matches.get(2));
+            return finalRes.get(ind);
+        }
+
+        /*for (String descriptionRankArray: descriptions){
+            for (int a=0; a<4; a++) {
+                for (String key : idMap_ShapeNet.keySet()) {
+                    Set<String> tags = idMap_ShapeNet.get(key);
+                    if (tags.contains(description)) {
+                        matches
+                        return key;
+                        //break;
+                    }
+                }
+            }
+        }*/
         System.out.println("NOT FOUND");
         //System.out.println("IdShapeNet " + idMap_ShapeNet);
 
@@ -260,10 +404,11 @@ public class RommJsonImporter extends JCasResourceCollectionReader_ImplBase {
     }
 
 
-    //Dayana
+    //Dayana, Jan
+    // returns a Map with all SUNCG ids each coupled with a List of String arrays of possible keywords each array of different priority, so as to aid finding their ShapeNet equivalent
     private static Map IdSUNCG() throws FileNotFoundException {
         // Creating a dictionary: key=Id, value=wnlemmas
-        Map<String, Set<String>> map = new HashMap<String, Set<String>>();
+        Map<String, List<List<String>>> map = new HashMap<>();
         //Get scanner instance
         Scanner scanner = new Scanner(new File(System.getProperty("user.dir") + "/resources/spaceeval/XML/ModelCategoryMapping.v2.csv"));
         //Set the delimiter to split objects
@@ -277,28 +422,43 @@ public class RommJsonImporter extends JCasResourceCollectionReader_ImplBase {
             //map.put(elem[1], elem[2].replaceAll("_", " "));
 
 
-            String res = "";
+            String[] res = new String[4];
 
             if (elem[2].replace("\"", "").length() != 0) {
-                res += elem[2]+",";
+                res[0] = elem[2];
             }
             if (elem[3].replace("\"", "").length() != 0) {
-                res += elem[3]+",";
+                res[1] = elem[3];
             }
             if (elem[5].replace("\"", "").length() != 0) {
-                res += elem[5]+",";
+                res[2] = elem[5];
             }
             if (elem[7].replace("\"", "").length() != 0) {
                 if(elem[7].split(".").length > 0){
-                    res += elem[7].split(".")[0];
+                    res[3] = elem[7].split(".")[0];
                 }
             }
-            res = res.replace("_", " ").replace("\"", "").replace("[", "").replace("]", "").toLowerCase();
-            List<String> resArray = Arrays.asList(res.split(","));
 
-            Set<String> resSet = new HashSet<String>(resArray);
+            List<List<String>> resArrays = new ArrayList<>();
+            for(int i=0; i<4; i++) {
+                if(res[i] == null) {
+                    res[i] = "";
+                }
+                res[i] = res[i].replace("_", " ").replace("\"", "").replace("[", "").replace("]", "").toLowerCase();
+                List<String> resArray = Arrays.asList(res[i].split(","));
 
-            map.put(elem[1], resSet);
+                //rm duplicates
+                Set<String> resSet = new HashSet<String>(resArray);
+
+                //getList
+                List<String> finalRes = new ArrayList<String>();
+                finalRes.addAll(resSet);
+
+                // get { hit1, hit2, hit3 } , asc priority
+                resArrays.add(finalRes);
+            }
+
+            map.put(elem[1], resArrays);
 
         }
         //Do not forget to close the scanner
@@ -310,7 +470,7 @@ public class RommJsonImporter extends JCasResourceCollectionReader_ImplBase {
     //Dayana
     private static Map IdShapeNet() throws FileNotFoundException {
         // Creating a dictionary: key=Id, value=wnlemmas
-        Map<String, Set<String>> map = new HashMap<String, Set<String>>();
+        Map<String, List<List<String>>> map = new HashMap<>();
 
         //Get scanner instance
         Scanner scanner = new Scanner(new File(System.getProperty("user.dir") + "/resources/spaceeval/XML/metadata_filter.csv"));
@@ -322,26 +482,49 @@ public class RommJsonImporter extends JCasResourceCollectionReader_ImplBase {
             //ignore the commas within quotes
             String[] elem = data.split(",(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)");
             //add words in the dictionary
-            String res = "";
+            String[] res = new String[4];
 
             if (elem[1].replace("\"", "").length() != 0) {
-                res += elem[1]+",";
+                res[0] = elem[1];
             }
             if (elem[3].replace("\"", "").length() != 0) {
-                res += elem[3]+",";
+                res[1] = elem[3];
             }
             if (elem[14].replace("\"", "").length() != 0) {
-                res += elem[14]+",";
+                res[2] = elem[14];
             }
             if (elem[15].replace("\"", "").length() != 0) {
-                res += elem[15];
+                res[3] = elem[15];
             }
+
+
+            List<List<String>> resArrays = new ArrayList<>();
+            for(int i=0; i<4; i++) {
+                if(res[i] == null) {
+                    res[i] = "";
+                }
+                res[i] = res[i].replace("_", " ").replace("\"", "").replace("[", "").replace("]", "").toLowerCase();
+                List<String> resArray = Arrays.asList(res[i].split(","));
+
+                //rm duplicates
+                Set<String> resSet = new HashSet<String>(resArray);
+
+                //getList
+                List<String> finalRes = new ArrayList<String>();
+                finalRes.addAll(resSet);
+
+                // get { hit1, hit2, hit3 } , asc priority
+                resArrays.add(finalRes);
+            }
+
+            map.put(elem[0], resArrays);
+            /*
             res = res.replace("\"", "").replace("[", "").replace("]", "").toLowerCase();
 
             List<String> resArray = Arrays.asList(res.split(","));
             Set<String> resSet = new HashSet<String>(resArray);
 
-            map.put(elem[0], resSet);
+            map.put(elem[0], resSet);*/
             //System.out.println(elem[0] + "\n " + map.get(elem[0]));
         }
         //Do not forget to close the scanner
