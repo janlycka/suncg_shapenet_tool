@@ -18,7 +18,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
-import java.util.Iterator;
+import java.util.*;
 
 // the following imports are required to run python
 // copied from https://github.com/texttechnologylab/textimager-uima/blob/master/textimager-uima-allennlp/src/main/java/org/hucompute/textimager/uima/allennlp/AllenNLPBase.java
@@ -33,9 +33,15 @@ import static org.apache.uima.fit.factory.CollectionReaderFactory.createReaderDe
 
 public class GenerateNewRoomWithDeepSynth {
 
+
 	/**
 	 * generates a new UIMA scene by the use of pre-trained Deep-synth models
-	 * example usage: GenerateNewRoomWithDeepSynth bedroom
+	 * example usage: -roomtype bedroom -nodel -demo -path "./deep-synth/"
+	 * example usage: java -cp IsoSpace2Uima.jar importer.isospace.GenerateNewRoomWithDeepSynth de.tudarmstadt.ukp.dkpro.core.api.metadata.type.DocumentMetaData -roomtype bedroom -nodel -demo -path "../../../deep-synth/"
+	 * roomtype - key for deepsynth
+	 * nodel - prevent deletion
+	 * demo - dont use deepsynth
+	 * path - path to deep-synth
 	 * @param args
 	 * @throws UIMAException
 	 * @throws CASRuntimeException
@@ -43,17 +49,42 @@ public class GenerateNewRoomWithDeepSynth {
 	 */
 	public static void main(String[] args) throws UIMAException, CASRuntimeException, IOException {
 
+		// argument parser
+		final Map<String, List<String>> params = new HashMap<>();
+
+		List<String> options = null;
+		for (int i = 0; i < args.length; i++) {
+			final String a = args[i];
+			System.out.println(a);
+
+			if (a.charAt(0) == '-') {
+				if (a.length() < 2) {
+					System.err.println("Error at argument " + a);
+					return;
+				}
+
+				options = new ArrayList<>();
+				params.put(a.substring(1), options);
+			}
+			else if (options != null) {
+				options.add(a);
+			}
+			/*else {
+				System.err.println("Illegal parameter usage");
+				return;
+			}*/
+		}
+
 		/**
 		 * Useful for debugging
 		 * with this flag, forbid any directory deletion
-		 * example usage: GenerateNewRoomWithDeepSynth bedroom nodel
+		 * example usage: -roomtype bedroom -nodel
 		 */
 		boolean allowFolderDeletion = true;
 
-		if(args.length > 1){
-			if (args[1] == "nodel") {
-				allowFolderDeletion = false;
-			}
+		if(params.get("nodel") != null){
+			System.out.println("Directory deletion disabled");
+			allowFolderDeletion = false;
 		}
 
 		// print current dir
@@ -65,19 +96,19 @@ public class GenerateNewRoomWithDeepSynth {
 		 * bedroom, office, living
 		 * intelliJ - set start args for debugging https://stackoverflow.com/questions/2066307/how-do-you-input-command-line-arguments-in-intellij-idea
 		 */
-		switch (args[0]) {
+		switch (params.get("roomtype").get(0)) {
 			case "bedroom":
 			case "living":
 			case "office":
 				break;
 			default:
-				System.out.println("arg0 should be one one of [bedroom, office, living]");
-				System.out.println("example usage: GenerateNewRoomWithDeepSynth bedroom");
+				System.out.println("roomtype should be one one of [bedroom, office, living]");
+				System.out.println("example usage: GenerateNewRoomWithDeepSynth -roomtype bedroom");
 				// quit app if invalid arg0
 				return;
 		}
 
-		System.out.println("room type (arg0): " + args[0]);
+		System.out.println("room type (roomtype): " + params.get("roomtype").get(0));
 
 		// args input check has passed, so now we simply run python scripts running deepSynth
 
@@ -86,6 +117,9 @@ public class GenerateNewRoomWithDeepSynth {
 		// parent directory (useful for debugging)
 		// String pref = "./deep-synth/";
 		String pref = "./";
+		if(params.get("path") != null){
+			pref = params.get("path").get(0);
+		}
 
 		// we pass this value to deepsynth, to store data in it
 		String result_deepSynth = "aufgabe_2_tmp_data";
@@ -108,24 +142,27 @@ public class GenerateNewRoomWithDeepSynth {
 
 		//prepare deep-synth command
 		// we want to save in result_deepSynth
-		// we want to pick a room from deepsynth/args[0]
+		// we want to pick a room from deepsynth/params.get("roomtype").get(0)
 		// we only want a single room, hence start 0, end 1
-		String command = "batch_synth.py --save-dir " + result_deepSynth + " --data-dir " + args[0] + " --model-dir res_1_" + args[0] + " --start 0 --end 1";
+		String command = "batch_synth.py --save-dir " + result_deepSynth + " --data-dir " + params.get("roomtype").get(0) + " --model-dir res_1_" + params.get("roomtype").get(0) + " --start 0 --end 1";
 
-		System.out.println("we will try to execute this in python: " + command);
+		if(params.get("demo") == null) {
+			System.out.println("we will try to execute this in python: " + command);
+		}
 		// jep executes the python script and waits until it's complete, which means we just wait till it's done
 
 		try (Interpreter interp = new SharedInterpreter()) {
-			/*
+
 			//test data to see if the plugin even works
 			interp.exec("from java.lang import System");
-			interp.exec("s = 'Hello World'");
-			for (int i=0; i<100; i++) {
-				interp.exec("System.out.println(s)");
-			}*/
+			interp.exec("s = 'JEP WORKS'");
+			interp.exec("System.out.println(s)");
 
 			//interp.runScript("C:\\Users\\Jan\\Documents\\projects\\nemcina_lycka\\languages.py");
-			interp.runScript(command);
+			if(params.get("demo") == null){
+				System.out.println("running deep-synth cmd in JEP: " + command);
+				interp.runScript(command);
+			}
 
 		} catch (JepException ex) {
 			throw new ResourceInitializationException(ex);
