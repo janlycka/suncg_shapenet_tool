@@ -28,12 +28,13 @@ import static org.apache.uima.fit.factory.CollectionReaderFactory.createReaderDe
 public class EvalTest {
 
 	public static void main(String[] args) throws UIMAException, CASRuntimeException, IOException, SAXException, ParserConfigurationException {
-
-//		File inputfolder = getFileFromURL("C:/Users/Alex/Desktop/Text2Scene/resources/spaceeval/XML");
-		File file = new File("C:/Users/Jan/text2scene/javastuff/anderes/resources/spaceeval/XML/Example.xml");
+			
+		
+		String inputfolder = "/resources/spaceeval/xml/Example.xml";
+		File file = new File(System.getProperty("user.dir") + inputfolder);
+		String outputfolder = System.getProperty("user.dir")+"/resources/spaceeval/xml/XML_To_JSON";
 //		File[] listOfFiles = inputfolder.listFiles();
 
-		String outputfolder = "C:/Users/Jan/text2scene/javastuff/anderes/resources/spaceeval/XML/XML_To_JSON";
 
 		File directory = new File(String.valueOf(outputfolder));
 		if (!directory.exists()) {
@@ -58,7 +59,7 @@ public class EvalTest {
 
 		String xml = XmlFormatter.getPrettyString(jcas.getCas());
 
-		Document document = builder.parse(new File("C:/Users/Jan/text2scene/javastuff/anderes/resources/spaceeval/XML/Example.xml"));
+		Document document = builder.parse(new File(System.getProperty("user.dir")+inputfolder;
 		document.getDocumentElement().normalize();
 		Element root = document.getDocumentElement();
 		System.out.println(root.getNodeName());
