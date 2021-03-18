@@ -43,7 +43,18 @@ public class GenerateNewRoomWithDeepSynth {
 	 */
 	public static void main(String[] args) throws UIMAException, CASRuntimeException, IOException {
 
+		/**
+		 * Useful for debugging
+		 * with this flag, forbid any directory deletion
+		 * example usage: GenerateNewRoomWithDeepSynth bedroom nodel
+		 */
 		boolean allowFolderDeletion = true;
+
+		if(args.length > 1){
+			if (args[1] == "nodel") {
+				allowFolderDeletion = false;
+			}
+		}
 
 		// print current dir
 		String current = new java.io.File( "." ).getCanonicalPath();
